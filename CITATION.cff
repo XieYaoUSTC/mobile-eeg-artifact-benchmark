@@ -5,6 +5,9 @@ authors:
   - family-names: Xie
     given-names: Yao
     email: xieyao@mail.ustc.edu.cn
+  - family-names: Sun
+    given-names: Lirui
+    affiliation: University of Science and Technology of China
 version: 0.1.0
 date-released: 2026-10-04
 license: MIT
