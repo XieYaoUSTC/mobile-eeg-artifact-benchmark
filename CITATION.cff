@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the manuscript and the datasets."
+title: "mobile-eeg-artifact-benchmark: a decoding-centred benchmark of IMU-referenced motion-artifact removal for ambulatory EEG-BCI"
+authors:
+  - family-names: Xie
+    given-names: Yao
+    email: xieyao@mail.ustc.edu.cn
+version: 0.1.0
+date-released: 2026-10-04
+license: MIT
