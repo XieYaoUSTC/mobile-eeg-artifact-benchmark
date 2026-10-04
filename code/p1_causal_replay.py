@@ -33,6 +33,7 @@ import p1_clean_eval as p  # noqa: E402
 FS = 100
 OUT = os.path.join(p.ROOT, 'results', 'p1_causal_replay')
 LAG = 10
+HP = float(os.environ.get('CAUSAL_HP', '0.5'))     # 因果高通截止(Hz);审稿补算用 0.1 做前端敏感性
 
 
 # ---------------- 因果前端 ----------------
@@ -50,7 +51,7 @@ def causal_eeg(path_or_tuple):
         names = raw.ch_names
         d = raw.get_data()
         eeg = d[:32] * 1e6
-        b, a = butter(2, 0.5 / (FS / 2), btype='high')
+        b, a = butter(2, HP / (FS / 2), btype='high')
         eeg = lfilter(b, a, eeg, axis=-1)
         eeg = eeg - eeg.mean(0, keepdims=True)
         imu_names = [c for c in names if c.startswith(('Hacc', 'Hgyro', 'Lacc', 'Lgyro', 'Racc', 'Rgyro'))]
@@ -64,7 +65,7 @@ def causal_eeg(path_or_tuple):
     fs0 = int(d['raw_fs'])
     clab = [str(c) for c in d['raw_clab']][:32]
     x = d['raw_x'].astype(float).T[:32]
-    b, a = butter(2, 0.5 / (fs0 / 2), btype='high')
+    b, a = butter(2, HP / (fs0 / 2), btype='high')
     x = lfilter(b, a, x, axis=-1)
     x = x - x.mean(0, keepdims=True)
     b, a = butter(4, 40 / (fs0 / 2), btype='low')
@@ -220,6 +221,8 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     subs = sorted({re.match(r'(s\d+)_', os.path.basename(f)).group(1) for f in glob.glob(os.path.join(p.DATA, 's*_scalp_*.mat'))})
     subs += sorted(os.path.basename(d) for d in glob.glob(os.path.join(p.OSF, 'sub-*')) if os.path.isdir(d))
+    if os.environ.get('SUBS'):
+        subs = [x for x in subs if x in os.environ['SUBS'].split(',')]
     out = Parallel(n_jobs=n_jobs)(delayed(run_subject)(s, thr, mu) for s in subs)
     rows = {s: r for s, r, _, _ in out}
     gates = [g for _, _, gs, _ in out for g in gs]
@@ -246,7 +249,7 @@ def main():
             v = np.array([t[k] for t in trans.values()], float)
             tsum[k] = {'mean': float(np.nanmean(v)), 'sd': float(np.nanstd(v, ddof=1)), 'n': int(np.isfinite(v).sum())}
     json.dump({'per_subject': rows, 'summary': summ, 'gate': gate_summary, 'gate_segments': gates, 'transition': trans, 'transition_summary': tsum,
-               'params': {'thr': thr, 'mu': mu}}, open(os.path.join(OUT, f'results_thr{thr:g}_mu{mu:g}.json'), 'w'), indent=1)
+               'params': {'thr': thr, 'mu': mu, 'hp': HP}}, open(os.path.join(OUT, f'results_thr{thr:g}_mu{mu:g}' + ('' if HP == 0.5 else f'_hp{HP:g}') + os.environ.get('OUT_TAG', '') + '.json'), 'w'), indent=1)
     print('\n=== 因果回放 汇总 ===')
     for task in ('ERP', 'SSVEP'):
         print(task, '        none    nlms_c  nlms_gated_c')

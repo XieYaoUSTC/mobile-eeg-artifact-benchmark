@@ -174,8 +174,8 @@ def m_reg(X, R, calib=None, alpha=None):
     return X - (Z @ B).T
 
 
-def m_cca(X, R, calib=None, thr=0.3):
-    Z = lagged(R)
+def m_cca(X, R, calib=None, thr=0.3, lag=LAG):
+    Z = lagged(R, lag)
     Z = Z - Z.mean(0)
     Xc = (X - X.mean(1, keepdims=True)).T                   # (T, 32)
     qx, rx = np.linalg.qr(Xc)
@@ -411,6 +411,65 @@ METHODS = {'none': m_none, 'asr': m_asr, 'asr10': m_asr10, 'reg': m_reg, 'cca': 
            'nlms_shift10': m_nlms_shift10, 'nlms_shift120': m_nlms_shift120, 'nlms_surr': m_nlms_surr}
 
 
+# ---------------- 审稿补算(v4):分块回归、CCA 2×2、r 网格延长 ----------------
+def m_reg_block(X, R, calib=None, block_s=30):
+    """分块岭回归:每 block_s 秒独立拟合(局部平稳假设),用于区分 NLMS 的优势来自"自适应"还是"算法"。
+    末块不足半块时并入前一块;块内时滞矩阵边界补零(与整段版相同的处理)。"""
+    T = X.shape[1]
+    B = int(block_s * FS)
+    edges = list(range(0, T, B))
+    if len(edges) > 1 and T - edges[-1] < B // 2:
+        edges = edges[:-1]
+    edges.append(T)
+    Y = X.copy()
+    for a, b in zip(edges[:-1], edges[1:]):
+        Y[:, a:b] = m_reg(X[:, a:b], R[:, a:b], calib)
+    return Y
+
+
+def m_reg_b10(X, R, calib=None):
+    return m_reg_block(X, R, calib, block_s=10)
+
+
+def m_reg_b30(X, R, calib=None):
+    return m_reg_block(X, R, calib, block_s=30)
+
+
+def m_cca40_nolag(X, R, calib=None):
+    """CCA 2×2 的一格:整段、无时滞、r>0.4。"""
+    return m_cca(X, R, calib, thr=0.4, lag=0)
+
+
+def m_cca50(X, R, calib=None):
+    return m_cca_thr(X, R, 0.5)
+
+
+def m_cca60(X, R, calib=None):
+    return m_cca_thr(X, R, 0.6)
+
+
+def m_cca70(X, R, calib=None):
+    return m_cca_thr(X, R, 0.7)
+
+
+def m_icc_w4_lag(X, R, calib=None):
+    """CCA 2×2 的一格:4 s 窗 + ±100 ms 时滞(378 个回归量对 400 个采样点,预期退化,如实报)。"""
+    return m_icc(X, R, calib, win=4.0, lag=LAG)
+
+
+def m_icc_w20(X, R, calib=None):
+    return m_icc(X, R, calib, win=20.0)
+
+
+def m_icc_w20_lag(X, R, calib=None):
+    return m_icc(X, R, calib, win=20.0, lag=LAG)
+
+
+METHODS.update({'reg_b10': m_reg_b10, 'reg_b30': m_reg_b30, 'cca40_nolag': m_cca40_nolag,
+                'cca50': m_cca50, 'cca60': m_cca60, 'cca70': m_cca70,
+                'icc_w4_lag': m_icc_w4_lag, 'icc_w20': m_icc_w20, 'icc_w20_lag': m_icc_w20_lag})
+
+
 # ---------------- 评估 ----------------
 def erp_feats(X, clab, on, y):
     idx = [clab.index(c) for c in ERP_CH if c in clab]
@@ -482,6 +541,8 @@ def main():
     n_jobs = int(sys.argv[2]) if len(sys.argv) > 2 else 4
     subs = sorted({re.match(r'(s\d+)_', os.path.basename(f)).group(1) for f in glob.glob(os.path.join(DATA, 's*_scalp_*.mat'))})
     subs += sorted(os.path.basename(d) for d in glob.glob(os.path.join(OSF, 'sub-*')) if os.path.isdir(d))
+    if os.environ.get('SUBS'):
+        subs = [x for x in subs if x in os.environ['SUBS'].split(',')]
     rows = dict(Parallel(n_jobs=n_jobs)(delayed(run_subject)(s, methods) for s in subs))
     summ = {}
     for task in ('ERP', 'SSVEP'):

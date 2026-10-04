@@ -1,0 +1,533 @@
+{
+ "pairs": {
+  "sub-19": "s07",
+  "sub-20": "s13",
+  "sub-21": "s15",
+  "sub-22": "s16",
+  "sub-23": "s17",
+  "sub-24": "s18"
+ },
+ "source": "/root/xieyao/\u8111\u7535\u8bba\u6587/results/p1_clean_eval/_v3_with_duplicates",
+ "rows": [
+  {
+   "method": "none",
+   "task": "ERP",
+   "speed": "0.0",
+   "n": 5,
+   "osf_minus_figshare_mean": -0.18644656308851593,
+   "max_abs_diff": 0.8611111111111236,
+   "per_pair": [
+    0.6,
+    -0.32,
+    -0.61,
+    -0.86,
+    0.26
+   ],
+   "effect_diff_mean": null,
+   "effect_max_abs": null
+  },
+  {
+   "method": "none",
+   "task": "ERP",
+   "speed": "0.8",
+   "n": 6,
+   "osf_minus_figshare_mean": 2.3333333333333335,
+   "max_abs_diff": 17.62499999999998,
+   "per_pair": [
+    0.47,
+    0.97,
+    -0.78,
+    17.62,
+    -5.34,
+    1.05
+   ],
+   "effect_diff_mean": null,
+   "effect_max_abs": null
+  },
+  {
+   "method": "none",
+   "task": "ERP",
+   "speed": "1.6",
+   "n": 6,
+   "osf_minus_figshare_mean": 3.554398148148154,
+   "max_abs_diff": 13.076388888888902,
+   "per_pair": [
+    -0.08,
+    0.72,
+    0.65,
+    13.08,
+    4.26,
+    2.69
+   ],
+   "effect_diff_mean": null,
+   "effect_max_abs": null
+  },
+  {
+   "method": "none",
+   "task": "SSVEP",
+   "speed": "0.0",
+   "n": 5,
+   "osf_minus_figshare_mean": -0.6666666666666685,
+   "max_abs_diff": 1.6666666666666714,
+   "per_pair": [
+    0.0,
+    -1.67,
+    0.0,
+    0.0,
+    -1.67
+   ],
+   "effect_diff_mean": null,
+   "effect_max_abs": null
+  },
+  {
+   "method": "none",
+   "task": "SSVEP",
+   "speed": "0.8",
+   "n": 5,
+   "osf_minus_figshare_mean": -0.33333333333333426,
+   "max_abs_diff": 6.666666666666671,
+   "per_pair": [
+    0.0,
+    -3.33,
+    3.33,
+    5.0,
+    -6.67
+   ],
+   "effect_diff_mean": null,
+   "effect_max_abs": null
+  },
+  {
+   "method": "none",
+   "task": "SSVEP",
+   "speed": "1.6",
+   "n": 5,
+   "osf_minus_figshare_mean": 1.3333333333333344,
+   "max_abs_diff": 3.3333333333333357,
+   "per_pair": [
+    0.0,
+    3.33,
+    0.0,
+    1.67,
+    1.67
+   ],
+   "effect_diff_mean": null,
+   "effect_max_abs": null
+  },
+  {
+   "method": "reg",
+   "task": "ERP",
+   "speed": "0.0",
+   "n": 5,
+   "osf_minus_figshare_mean": -0.2977871939736376,
+   "max_abs_diff": 1.0208333333333375,
+   "per_pair": [
+    0.77,
+    -0.85,
+    -0.7,
+    -1.02,
+    0.32
+   ],
+   "effect_diff_mean": -0.1113406308851217,
+   "effect_max_abs": 0.534722222222217
+  },
+  {
+   "method": "reg",
+   "task": "ERP",
+   "speed": "0.8",
+   "n": 6,
+   "osf_minus_figshare_mean": 2.744212962962966,
+   "max_abs_diff": 21.930555555555564,
+   "per_pair": [
+    1.41,
+    2.31,
+    -2.15,
+    21.93,
+    -6.9,
+    -0.14
+   ],
+   "effect_diff_mean": 0.4108796296296327,
+   "effect_max_abs": 4.305555555555585
+  },
+  {
+   "method": "reg",
+   "task": "ERP",
+   "speed": "1.6",
+   "n": 6,
+   "osf_minus_figshare_mean": 4.631944444444442,
+   "max_abs_diff": 21.923611111111107,
+   "per_pair": [
+    8.38,
+    1.15,
+    -1.12,
+    21.92,
+    -4.33,
+    1.8
+   ],
+   "effect_diff_mean": 1.0775462962962872,
+   "effect_max_abs": 8.847222222222207
+  },
+  {
+   "method": "reg",
+   "task": "SSVEP",
+   "speed": "0.0",
+   "n": 5,
+   "osf_minus_figshare_mean": 0.0,
+   "max_abs_diff": 1.6666666666666643,
+   "per_pair": [
+    0.0,
+    1.67,
+    0.0,
+    0.0,
+    -1.67
+   ],
+   "effect_diff_mean": 0.6666666666666685,
+   "effect_max_abs": 3.3333333333333357
+  },
+  {
+   "method": "reg",
+   "task": "SSVEP",
+   "speed": "0.8",
+   "n": 5,
+   "osf_minus_figshare_mean": 1.0,
+   "max_abs_diff": 5.000000000000007,
+   "per_pair": [
+    0.0,
+    5.0,
+    0.0,
+    3.33,
+    -3.33
+   ],
+   "effect_diff_mean": 1.3333333333333344,
+   "effect_max_abs": 8.333333333333336
+  },
+  {
+   "method": "reg",
+   "task": "SSVEP",
+   "speed": "1.6",
+   "n": 5,
+   "osf_minus_figshare_mean": 1.3333333333333357,
+   "max_abs_diff": 3.333333333333343,
+   "per_pair": [
+    0.0,
+    0.0,
+    0.0,
+    3.33,
+    3.33
+   ],
+   "effect_diff_mean": 1.4210854715202005e-15,
+   "effect_max_abs": 3.3333333333333357
+  },
+  {
+   "method": "nlms_gated",
+   "task": "ERP",
+   "speed": "0.0",
+   "n": 5,
+   "osf_minus_figshare_mean": -0.23076153483992945,
+   "max_abs_diff": 1.0347222222222285,
+   "per_pair": [
+    0.59,
+    -0.35,
+    -0.6,
+    -1.03,
+    0.25
+   ],
+   "effect_diff_mean": -0.04431497175141352,
+   "effect_max_abs": 0.17361111111110494
+  },
+  {
+   "method": "nlms_gated",
+   "task": "ERP",
+   "speed": "0.8",
+   "n": 6,
+   "osf_minus_figshare_mean": 4.012731481481485,
+   "max_abs_diff": 23.875,
+   "per_pair": [
+    3.06,
+    3.28,
+    -1.11,
+    23.88,
+    -7.96,
+    2.93
+   ],
+   "effect_diff_mean": 1.6793981481481517,
+   "effect_max_abs": 6.250000000000022
+  },
+  {
+   "method": "nlms_gated",
+   "task": "ERP",
+   "speed": "1.6",
+   "n": 6,
+   "osf_minus_figshare_mean": 4.596064814814811,
+   "max_abs_diff": 25.506944444444457,
+   "per_pair": [
+    9.49,
+    -0.88,
+    -2.01,
+    25.51,
+    -6.58,
+    2.05
+   ],
+   "effect_diff_mean": 1.0416666666666572,
+   "effect_max_abs": 12.430555555555555
+  },
+  {
+   "method": "nlms_gated",
+   "task": "SSVEP",
+   "speed": "0.0",
+   "n": 5,
+   "osf_minus_figshare_mean": -1.0000000000000013,
+   "max_abs_diff": 3.3333333333333357,
+   "per_pair": [
+    0.0,
+    -3.33,
+    0.0,
+    0.0,
+    -1.67
+   ],
+   "effect_diff_mean": -0.33333333333333287,
+   "effect_max_abs": 1.6666666666666643
+  },
+  {
+   "method": "nlms_gated",
+   "task": "SSVEP",
+   "speed": "0.8",
+   "n": 5,
+   "osf_minus_figshare_mean": -0.6666666666666657,
+   "max_abs_diff": 8.333333333333329,
+   "per_pair": [
+    0.0,
+    0.0,
+    1.67,
+    3.33,
+    -8.33
+   ],
+   "effect_diff_mean": -0.3333333333333314,
+   "effect_max_abs": 3.3333333333333286
+  },
+  {
+   "method": "nlms_gated",
+   "task": "SSVEP",
+   "speed": "1.6",
+   "n": 5,
+   "osf_minus_figshare_mean": 1.0,
+   "max_abs_diff": 5.0,
+   "per_pair": [
+    0.0,
+    5.0,
+    -1.67,
+    1.67,
+    0.0
+   ],
+   "effect_diff_mean": -0.33333333333333426,
+   "effect_max_abs": 1.6666666666666714
+  },
+  {
+   "method": "asr10_std",
+   "task": "ERP",
+   "speed": "0.0",
+   "n": 5,
+   "osf_minus_figshare_mean": 0.38040842749529136,
+   "max_abs_diff": 3.6250000000000004,
+   "per_pair": [
+    0.87,
+    3.63,
+    0.78,
+    -3.51,
+    0.14
+   ],
+   "effect_diff_mean": 0.5668549905838071,
+   "effect_max_abs": 3.9444444444444504
+  },
+  {
+   "method": "asr10_std",
+   "task": "ERP",
+   "speed": "0.8",
+   "n": 6,
+   "osf_minus_figshare_mean": -1.9837962962962916,
+   "max_abs_diff": 10.430555555555543,
+   "per_pair": [
+    -7.94,
+    1.13,
+    1.01,
+    3.38,
+    -10.43,
+    0.96
+   ],
+   "effect_diff_mean": -4.317129629629625,
+   "effect_max_abs": 14.249999999999973
+  },
+  {
+   "method": "asr10_std",
+   "task": "ERP",
+   "speed": "1.6",
+   "n": 6,
+   "osf_minus_figshare_mean": -1.340277777777778,
+   "max_abs_diff": 7.027777777777788,
+   "per_pair": [
+    2.74,
+    1.21,
+    -7.03,
+    -2.47,
+    1.17,
+    -3.66
+   ],
+   "effect_diff_mean": -4.894675925925932,
+   "effect_max_abs": 15.548611111111121
+  },
+  {
+   "method": "asr10_std",
+   "task": "SSVEP",
+   "speed": "0.0",
+   "n": 5,
+   "osf_minus_figshare_mean": -0.6666666666666672,
+   "max_abs_diff": 1.6666666666666714,
+   "per_pair": [
+    0.0,
+    -1.67,
+    0.0,
+    0.0,
+    -1.67
+   ],
+   "effect_diff_mean": 1.4210854715202005e-15,
+   "effect_max_abs": 7.105427357601002e-15
+  },
+  {
+   "method": "asr10_std",
+   "task": "SSVEP",
+   "speed": "0.8",
+   "n": 5,
+   "osf_minus_figshare_mean": 0.3333333333333286,
+   "max_abs_diff": 4.999999999999986,
+   "per_pair": [
+    0.0,
+    -1.67,
+    5.0,
+    0.0,
+    -1.67
+   ],
+   "effect_diff_mean": 0.6666666666666629,
+   "effect_max_abs": 5.0
+  },
+  {
+   "method": "asr10_std",
+   "task": "SSVEP",
+   "speed": "1.6",
+   "n": 5,
+   "osf_minus_figshare_mean": 2.333333333333331,
+   "max_abs_diff": 8.333333333333332,
+   "per_pair": [
+    0.0,
+    8.33,
+    1.67,
+    0.0,
+    1.67
+   ],
+   "effect_diff_mean": 0.9999999999999964,
+   "effect_max_abs": 4.9999999999999964
+  },
+  {
+   "method": "asr10",
+   "task": "ERP",
+   "speed": "0.0",
+   "n": 5,
+   "osf_minus_figshare_mean": 0.35703860640301704,
+   "max_abs_diff": 4.340277777777779,
+   "per_pair": [
+    0.13,
+    4.34,
+    0.21,
+    -3.15,
+    0.25
+   ],
+   "effect_diff_mean": 0.5434851694915331,
+   "effect_max_abs": 4.6597222222222285
+  },
+  {
+   "method": "asr10",
+   "task": "ERP",
+   "speed": "0.8",
+   "n": 6,
+   "osf_minus_figshare_mean": 1.0636574074074108,
+   "max_abs_diff": 9.215277777777775,
+   "per_pair": [
+    -7.5,
+    9.22,
+    0.5,
+    2.99,
+    -1.36,
+    2.53
+   ],
+   "effect_diff_mean": -1.269675925925923,
+   "effect_max_abs": 14.631944444444422
+  },
+  {
+   "method": "asr10",
+   "task": "ERP",
+   "speed": "1.6",
+   "n": 6,
+   "osf_minus_figshare_mean": 1.0937500000000009,
+   "max_abs_diff": 4.1666666666666625,
+   "per_pair": [
+    3.17,
+    -0.4,
+    3.49,
+    1.2,
+    3.27,
+    -4.17
+   ],
+   "effect_diff_mean": -2.4606481481481537,
+   "effect_max_abs": 11.875000000000002
+  },
+  {
+   "method": "asr10",
+   "task": "SSVEP",
+   "speed": "0.0",
+   "n": 5,
+   "osf_minus_figshare_mean": -1.0,
+   "max_abs_diff": 3.3333333333333357,
+   "per_pair": [
+    0.0,
+    -3.33,
+    0.0,
+    0.0,
+    -1.67
+   ],
+   "effect_diff_mean": -0.3333333333333314,
+   "effect_max_abs": 1.6666666666666643
+  },
+  {
+   "method": "asr10",
+   "task": "SSVEP",
+   "speed": "0.8",
+   "n": 5,
+   "osf_minus_figshare_mean": 4.000000000000002,
+   "max_abs_diff": 11.666666666666671,
+   "per_pair": [
+    1.67,
+    3.33,
+    3.33,
+    0.0,
+    11.67
+   ],
+   "effect_diff_mean": 4.333333333333336,
+   "effect_max_abs": 18.333333333333343
+  },
+  {
+   "method": "asr10",
+   "task": "SSVEP",
+   "speed": "1.6",
+   "n": 5,
+   "osf_minus_figshare_mean": -1.666666666666665,
+   "max_abs_diff": 6.666666666666657,
+   "per_pair": [
+    -3.33,
+    3.33,
+    -6.67,
+    -3.33,
+    1.67
+   ],
+   "effect_diff_mean": -2.999999999999999,
+   "effect_max_abs": 6.666666666666657
+  }
+ ]
+}

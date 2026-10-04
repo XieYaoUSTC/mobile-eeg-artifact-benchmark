@@ -19,7 +19,9 @@ def erp_feats_imu(R, on, y):
     f = np.stack([ep[:, (t > a) & (t <= b), :].mean(1) for a, b in p.ERP_IVALS], 0)
     return f.reshape(-1, f.shape[-1]).T, yy
 
-subs = sorted({re.match(r'(s\d+)_', os.path.basename(f)).group(1) for f in glob.glob(os.path.join(p.DATA, 's*_scalp_*.mat'))}) + [f'sub-{i}' for i in range(19, 25)]
+subs = sorted({re.match(r'(s\d+)_', os.path.basename(f)).group(1) for f in glob.glob(os.path.join(p.DATA, 's*_scalp_*.mat'))}) + sorted(os.path.basename(d) for d in glob.glob(os.path.join(p.OSF, 'sub-*')) if os.path.isdir(d))
+if os.environ.get('SUBS'):
+    subs = [x for x in subs if x in os.environ['SUBS'].split(',')]
 res = {}
 for sub in subs:
     r = {}
@@ -58,4 +60,4 @@ for key in sorted({k for r in res.values() for k in r}):
     summ[key] = {'mean': float(np.mean(v)), 'sd': float(np.std(v, ddof=1)), 'n': len(v)}
     print(f'{key:18s} {np.mean(v):.3f} ± {np.std(v, ddof=1):.3f} (n={len(v)})')
 os.makedirs(p.OUT, exist_ok=True)
-json.dump({'per_subject': res, 'summary': summ}, open(os.path.join(p.OUT, 'imu_only_decoding.json'), 'w'), indent=1)
+json.dump({'per_subject': res, 'summary': summ}, open(os.path.join(p.OUT, 'imu_only_decoding' + os.environ.get('OUT_TAG', '') + '.json'), 'w'), indent=1)

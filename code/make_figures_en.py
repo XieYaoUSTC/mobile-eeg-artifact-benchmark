@@ -16,8 +16,10 @@ OUT = os.path.join(ROOT, 'paper_jne', 'figs')
 os.makedirs(OUT, exist_ok=True)
 plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 9, 'axes.unicode_minus': False})
 R = {}
-for f in ['results_24.json', 'results_24_gated.json', 'results_24_asrfix_icc.json', 'results_24_tuning.json', 'results_24_controls2.json']:
+for f in ['results_24.json', 'results_24_gated.json', 'results_24_asrfix_icc.json', 'results_24_tuning.json', 'results_24_controls2.json', 'results_24_methods2.json', 'results_24_asr_std.json']:
     for s, d in json.load(open(os.path.join(ROOT, 'results', 'p1_clean_eval', f)))['per_subject'].items():
+        if f == 'results_24_asr_std.json':
+            d = {k: v for k, v in d.items() if not k.endswith('_none')}
         R.setdefault(s, {}).update(d)
 R['sub-21'] = {k: v for k, v in R.get('sub-21', {}).items() if not k.startswith('ERP_0.0_')}
 C = json.load(open(os.path.join(ROOT, 'results', 'p1_causal_replay', 'results_thr100_mu0.05.json')))['per_subject']
@@ -32,9 +34,9 @@ def save(fig, name):
 
 
 # ---- Fig 1
-methods = [('none', 'No processing', 'k', '-', 2.0), ('reg', 'IMU regression (reg)', 'tab:blue', '-', 2.0), ('nlms_gated', 'Gated NLMS (replay)', 'tab:red', '-', 2.0),
-           ('asr10', 'Rank-safe ASR (cutoff 10)', 'tab:gray', '-', 1.0), ('cca40', 'Global CCA (r = 0.4)', 'tab:green', '-', 1.0),
-           ('gait', 'Gait template', 'tab:orange', '-', 1.0), ('icc_w4', 'iCanClean-style (4 s)', 'tab:purple', '--', 1.0)]
+methods = [('none', 'No processing', 'k', '-', 2.0), ('reg', 'IMU regression (reg)', 'tab:blue', '-', 2.0), ('nlms_gated', 'Gated NLMS (replay; standing = none by construction)', 'tab:red', '-', 2.0),
+           ('asr10_std', 'ASR (cutoff 10)', 'tab:gray', '-', 1.0), ('cca40', 'Global CCA (r = 0.4, lags)', 'tab:green', '-', 1.0),
+           ('gait', 'Gait template', 'tab:orange', '-', 1.0), ('icc_w4', 'iCanClean-style (4 s, no lags)', 'tab:purple', '--', 1.0)]
 fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.6))
 for ax, task, ylab in [(axes[0], 'ERP', 'ERP decoding (AUC)'), (axes[1], 'SSVEP', 'SSVEP accuracy (%)')]:
     ns = []
@@ -47,8 +49,8 @@ for ax, task, ylab in [(axes[0], 'ERP', 'ERP decoding (AUC)'), (axes[1], 'SSVEP'
         ax.errorbar(range(4), mean, yerr=se, label=lab, color=col, ls=ls, lw=lw, marker='o', ms=3.5 if lw > 1.5 else 2.5, capsize=2, alpha=1 if lw > 1.5 else 0.8)
     mean = [np.mean([d[f'{task}_{sp}_nlms_gated_c'] for d in C.values() if f'{task}_{sp}_nlms_gated_c' in d]) for sp in speeds]
     mean0 = [np.mean([d[f'{task}_{sp}_none'] for d in C.values() if f'{task}_{sp}_none' in d]) for sp in speeds]
-    ax.plot(range(4), mean, color='tab:red', ls=':', marker='s', ms=3, lw=1.2, label='Gated NLMS (causal)')
-    ax.plot(range(4), mean0, color='k', ls=':', marker='s', ms=3, lw=1.0, label='No processing (causal front end)')
+    ax.plot(range(4), mean, color='tab:red', ls=':', marker='^', ms=4, lw=1.2, label='Gated NLMS (causal pipeline)')
+    ax.plot(range(4), mean0, color='k', ls=':', marker='^', ms=4, lw=1.0, label='No processing (causal front end)')
     ax.set_xticks(range(4)); ax.set_xticklabels([f'{l}\n(n={k})' for l, k in zip(labels, ns)], fontsize=7.5)
     ax.set_ylabel(ylab); ax.set_xlabel('Treadmill speed (m/s)'); ax.grid(alpha=.3)
     ax.axhline(33.3 if task == 'SSVEP' else 0.5, ls='--', c='gray', lw=.7)
@@ -78,8 +80,9 @@ if os.environ.get('ONLY_FIG1') == '1':
 import p1_clean_eval as p  # noqa: E402
 from scipy.signal import welch  # noqa: E402
 
-subs = [f's{i:02d}' for i in range(1, 19)] + [f'sub-{i}' for i in range(19, 25)]
-fig, axes = plt.subplots(2, 3, figsize=(7.2, 4.6), sharey='row')
+import glob  # noqa: E402
+subs = [f's{i:02d}' for i in range(1, 19)] + sorted(os.path.basename(d) for d in glob.glob(os.path.join(p.OSF, 'sub-*')) if os.path.isdir(d))
+fig, axes = plt.subplots(2, 3, figsize=(7.2, 5.0), sharey='row')
 t = np.arange(-20, 80) * 10
 for r, sp in enumerate(['1.6', '2.0']):
     curves = {m: {'t': [], 'n': []} for m in ['none', 'reg', 'nlms_gated']}
@@ -99,7 +102,7 @@ for r, sp in enumerate(['1.6', '2.0']):
             mu, se = arr.mean(0), arr.std(0) / np.sqrt(len(arr))
             ax.plot(t, mu, c=col, lw=1.2, label=lb); ax.fill_between(t, mu - se, mu + se, color=col, alpha=.2)
         ax.axvline(0, c='gray', lw=.7); ax.axvspan(200, 450, color='gray', alpha=.08); ax.grid(alpha=.3)
-        ax.set_title(f'{"Fast walk 1.6" if sp == "1.6" else "Slight run 2.0"} m/s, {lab} (n={len(T)})', fontsize=8)
+        ax.set_title(f'{"Fast walk 1.6 m/s" if sp == "1.6" else "Slight run 2.0 m/s"} (n={len(T)})\n{lab}', fontsize=7.5)
         if k == 0:
             ax.set_ylabel('Pz amplitude (µV)')
         if r == 1:
@@ -123,13 +126,14 @@ for k, sp in enumerate(['0.8', '1.6', '2.0']):
     ax.semilogy(f[m], np.median(Pe, 0)[m], c='k', lw=1.1, label='Oz, no processing')
     ax.semilogy(f[m], np.median(Pr, 0)[m], c='tab:blue', lw=1.0, label='Oz, IMU regression')
     ax.semilogy(f[m], np.median(Pn, 0)[m], c='tab:red', lw=1.0, label='Oz, gated NLMS')
-    ax2 = ax.twinx(); ax2.semilogy(f[m], np.median(Pa, 0)[m], c='tab:green', alpha=.6, lw=.9, label='head acceleration'); ax2.set_yticks([])
+    ax2 = ax.twinx(); ax2.semilogy(f[m], np.median(Pa, 0)[m], c='tab:green', alpha=.6, lw=.9, label='head acceleration (right axis)'); ax2.tick_params(axis='y', labelsize=6, colors='tab:green')
     for fr in (5.45, 8.57, 12):
         ax.axvline(fr, c='gray', ls=':', lw=.7)
     ax.set_title(f'{sp} m/s (n={len(Pe)})', fontsize=8); ax.set_xlabel('Frequency (Hz)'); ax.grid(alpha=.3)
     if k == 0:
-        ax.set_ylabel('Median PSD (log)'); ax.legend(fontsize=6, loc='upper right', frameon=False)
+        ax.set_ylabel('Oz median PSD ($\\mu$V$^2$/Hz)'); ax.legend(fontsize=6, loc='upper right', frameon=False)
     if k == 2:
+        ax2.set_ylabel('Head acceleration PSD (a.u.)', fontsize=7, color='tab:green')
         ax2.legend(fontsize=6, loc='center right', frameon=False)
 fig.tight_layout(); save(fig, 'fig4_spectra')
 print('figures written to', OUT)
