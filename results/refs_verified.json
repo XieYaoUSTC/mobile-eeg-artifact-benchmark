@@ -1,0 +1,1799 @@
+{
+ "gramann2011": {
+  "status": "OK",
+  "title": "Cognition in action: imaging brain/body dynamics in mobile humans",
+  "authors": [
+   [
+    "Gramann",
+    "Klaus"
+   ],
+   [
+    "Gwin",
+    "Joseph T."
+   ],
+   [
+    "Ferris",
+    "Daniel P."
+   ],
+   [
+    "Oie",
+    "Kelvin"
+   ],
+   [
+    "Jung",
+    "Tzyy-Ping"
+   ],
+   [
+    "Lin",
+    "Chin-Teng"
+   ],
+   [
+    "Liao",
+    "Lun-De"
+   ],
+   [
+    "Makeig",
+    "Scott"
+   ]
+  ],
+  "year": 2011,
+  "journal": "Reviews in the Neurosciences",
+  "volume": "22",
+  "issue": "6",
+  "page": "",
+  "article": "",
+  "doi": "10.1515/rns.2011.047",
+  "type": "journal-article",
+  "publisher": "Walter de Gruyter GmbH"
+ },
+ "castermans2014": {
+  "status": "OK",
+  "title": "About the cortical origin of the low-delta and high-gamma rhythms observed in EEG signals during treadmill walking",
+  "authors": [
+   [
+    "Castermans",
+    "Thierry"
+   ],
+   [
+    "Duvinage",
+    "Matthieu"
+   ],
+   [
+    "Cheron",
+    "Guy"
+   ],
+   [
+    "Dutoit",
+    "Thierry"
+   ]
+  ],
+  "year": 2014,
+  "journal": "Neuroscience Letters",
+  "short_journal": "Neuroscience Letters",
+  "volume": "561",
+  "issue": "",
+  "page": "166-170",
+  "article": "",
+  "doi": "10.1016/j.neulet.2013.12.059",
+  "type": "journal-article",
+  "publisher": "Elsevier BV"
+ },
+ "nathan2016": {
+  "status": "OK",
+  "title": "Negligible Motion Artifacts in Scalp Electroencephalography (EEG) During Treadmill Walking",
+  "authors": [
+   [
+    "Nathan",
+    "Kevin"
+   ],
+   [
+    "Contreras-Vidal",
+    "Jose L."
+   ]
+  ],
+  "year": 2016,
+  "journal": "Frontiers in Human Neuroscience",
+  "volume": "9",
+  "issue": "",
+  "page": "",
+  "article": "",
+  "doi": "10.3389/fnhum.2015.00708",
+  "type": "journal-article",
+  "publisher": "Frontiers Media SA"
+ },
+ "snyder2015": {
+  "status": "OK",
+  "title": "Independent Component Analysis of Gait-Related Movement Artifact Recorded using EEG Electrodes during Treadmill Walking",
+  "authors": [
+   [
+    "Snyder",
+    "Kristine L."
+   ],
+   [
+    "Kline",
+    "Julia E."
+   ],
+   [
+    "Huang",
+    "Helen J."
+   ],
+   [
+    "Ferris",
+    "Daniel P."
+   ]
+  ],
+  "year": 2015,
+  "journal": "Frontiers in Human Neuroscience",
+  "volume": "9",
+  "issue": "",
+  "page": "",
+  "article": "",
+  "doi": "10.3389/fnhum.2015.00639",
+  "type": "journal-article",
+  "publisher": "Frontiers Media SA"
+ },
+ "oliveira2016": {
+  "status": "OK",
+  "title": "Proposing Metrics for Benchmarking Novel EEG Technologies Towards Real-World Measurements",
+  "authors": [
+   [
+    "Oliveira",
+    "Anderson S."
+   ],
+   [
+    "Schlink",
+    "Bryan R."
+   ],
+   [
+    "Hairston",
+    "W. David"
+   ],
+   [
+    "König",
+    "Peter"
+   ],
+   [
+    "Ferris",
+    "Daniel P."
+   ]
+  ],
+  "year": 2016,
+  "journal": "Frontiers in Human Neuroscience",
+  "volume": "10",
+  "issue": "",
+  "page": "",
+  "article": "",
+  "doi": "10.3389/fnhum.2016.00188",
+  "type": "journal-article",
+  "publisher": "Frontiers Media SA"
+ },
+ "oliveira2017": {
+  "status": "OK",
+  "title": "A Channel Rejection Method for Attenuating Motion-Related Artifacts in EEG Recordings during Walking",
+  "authors": [
+   [
+    "Oliveira",
+    "Anderson S."
+   ],
+   [
+    "Schlink",
+    "Bryan R."
+   ],
+   [
+    "Hairston",
+    "W. David"
+   ],
+   [
+    "König",
+    "Peter"
+   ],
+   [
+    "Ferris",
+    "Daniel P."
+   ]
+  ],
+  "year": 2017,
+  "journal": "Frontiers in Neuroscience",
+  "short_journal": "Front. Neurosci.",
+  "volume": "11",
+  "issue": "",
+  "page": "",
+  "article": "225",
+  "doi": "10.3389/fnins.2017.00225",
+  "type": "journal-article",
+  "publisher": "Frontiers Media SA"
+ },
+ "nordin2020": {
+  "status": "OK",
+  "title": "Faster Gait Speeds Reduce Alpha and Beta EEG Spectral Power From Human Sensorimotor Cortex",
+  "authors": [
+   [
+    "Nordin",
+    "Andrew D."
+   ],
+   [
+    "Hairston",
+    "W. David"
+   ],
+   [
+    "Ferris",
+    "Daniel P."
+   ]
+  ],
+  "year": 2020,
+  "journal": "IEEE Transactions on Biomedical Engineering",
+  "short_journal": "IEEE Trans. Biomed. Eng.",
+  "volume": "67",
+  "issue": "3",
+  "page": "842-853",
+  "article": "",
+  "doi": "10.1109/tbme.2019.2921766",
+  "type": "journal-article",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)"
+ },
+ "richer2020": {
+  "status": "OK",
+  "title": "Motion and Muscle Artifact Removal Validation Using an Electrical Head Phantom, Robotic Motion Platform, and Dual Layer Mobile EEG",
+  "authors": [
+   [
+    "Richer",
+    "Natalie"
+   ],
+   [
+    "Downey",
+    "Ryan J."
+   ],
+   [
+    "Hairston",
+    "W. David"
+   ],
+   [
+    "Ferris",
+    "Daniel P."
+   ],
+   [
+    "Nordin",
+    "Andrew D."
+   ]
+  ],
+  "year": 2020,
+  "journal": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+  "short_journal": "IEEE Trans. Neural Syst. Rehabil. Eng.",
+  "volume": "28",
+  "issue": "8",
+  "page": "1825-1835",
+  "article": "",
+  "doi": "10.1109/tnsre.2020.3000971",
+  "type": "journal-article",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)"
+ },
+ "symeonidou2018": {
+  "status": "OK",
+  "title": "Effects of Cable Sway, Electrode Surface Area, and Electrode Mass on Electroencephalography Signal Quality during Motion",
+  "authors": [
+   [
+    "Symeonidou",
+    "Evangelia-Regkina"
+   ],
+   [
+    "Nordin",
+    "Andrew"
+   ],
+   [
+    "Hairston",
+    "W."
+   ],
+   [
+    "Ferris",
+    "Daniel"
+   ]
+  ],
+  "year": 2018,
+  "journal": "Sensors",
+  "short_journal": "Sensors",
+  "volume": "18",
+  "issue": "4",
+  "page": "1073",
+  "article": "",
+  "doi": "10.3390/s18041073",
+  "type": "journal-article",
+  "publisher": "MDPI AG"
+ },
+ "debener2012": {
+  "status": "OK",
+  "title": "How about taking a low‐cost, small, and wireless\n                    <scp>EEG</scp>\n                    for a walk?",
+  "authors": [
+   [
+    "Debener",
+    "Stefan"
+   ],
+   [
+    "Minow",
+    "Falk"
+   ],
+   [
+    "Emkes",
+    "Reiner"
+   ],
+   [
+    "Gandras",
+    "Katharina"
+   ],
+   [
+    "de Vos",
+    "Maarten"
+   ]
+  ],
+  "year": 2012,
+  "journal": "Psychophysiology",
+  "volume": "49",
+  "issue": "11",
+  "page": "1617-1621",
+  "article": "",
+  "doi": "10.1111/j.1469-8986.2012.01471.x",
+  "type": "journal-article",
+  "publisher": "Wiley"
+ },
+ "devos2014": {
+  "status": "OK",
+  "title": "Towards a truly mobile auditory brain–computer interface: Exploring the P300 to take away",
+  "authors": [
+   [
+    "De Vos",
+    "Maarten"
+   ],
+   [
+    "Gandras",
+    "Katharina"
+   ],
+   [
+    "Debener",
+    "Stefan"
+   ]
+  ],
+  "year": 2014,
+  "journal": "International Journal of Psychophysiology",
+  "short_journal": "International Journal of Psychophysiology",
+  "volume": "91",
+  "issue": "1",
+  "page": "46-53",
+  "article": "",
+  "doi": "10.1016/j.ijpsycho.2013.08.010",
+  "type": "journal-article",
+  "publisher": "Elsevier BV"
+ },
+ "lin2014": {
+  "status": "OK",
+  "title": "Assessing the quality of steady-state visual-evoked potentials for moving humans using a mobile electroencephalogram headset",
+  "authors": [
+   [
+    "Lin",
+    "Yuan-Pin"
+   ],
+   [
+    "Wang",
+    "Yijun"
+   ],
+   [
+    "Wei",
+    "Chun-Shu"
+   ],
+   [
+    "Jung",
+    "Tzyy-Ping"
+   ]
+  ],
+  "year": 2014,
+  "journal": "Frontiers in Human Neuroscience",
+  "volume": "8",
+  "issue": "",
+  "page": "",
+  "article": "",
+  "doi": "10.3389/fnhum.2014.00182",
+  "type": "journal-article",
+  "publisher": "Frontiers Media SA"
+ },
+ "zink2016": {
+  "status": "OK",
+  "title": "Mobile EEG on the bike: disentangling attentional and physical contributions to auditory attention tasks",
+  "authors": [
+   [
+    "Zink",
+    "Rob"
+   ],
+   [
+    "Hunyadi",
+    "Borbála"
+   ],
+   [
+    "Huffel",
+    "Sabine Van"
+   ],
+   [
+    "Vos",
+    "Maarten De"
+   ]
+  ],
+  "year": 2016,
+  "journal": "Journal of Neural Engineering",
+  "short_journal": "J. Neural Eng.",
+  "volume": "13",
+  "issue": "4",
+  "page": "046017",
+  "article": "",
+  "doi": "10.1088/1741-2560/13/4/046017",
+  "type": "journal-article",
+  "publisher": "IOP Publishing"
+ },
+ "kwak2020": {
+  "status": "OK",
+  "title": "Error Correction Regression Framework for Enhancing the Decoding Accuracies of Ear-EEG Brain–Computer Interfaces",
+  "authors": [
+   [
+    "Kwak",
+    "No-Sang"
+   ],
+   [
+    "Lee",
+    "Seong-Whan"
+   ]
+  ],
+  "year": 2020,
+  "journal": "IEEE Transactions on Cybernetics",
+  "short_journal": "IEEE Trans. Cybern.",
+  "volume": "50",
+  "issue": "8",
+  "page": "3654-3667",
+  "article": "",
+  "doi": "10.1109/tcyb.2019.2924237",
+  "type": "journal-article",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)"
+ },
+ "widrow1975": {
+  "status": "OK",
+  "title": "Adaptive noise cancelling: Principles and applications",
+  "authors": [
+   [
+    "Widrow",
+    "B."
+   ],
+   [
+    "Glover",
+    "J.R."
+   ],
+   [
+    "McCool",
+    "J.M."
+   ],
+   [
+    "Kaunitz",
+    "J."
+   ],
+   [
+    "Williams",
+    "C.S."
+   ],
+   [
+    "Hearn",
+    "R.H."
+   ],
+   [
+    "Zeidler",
+    "J.R."
+   ],
+   [
+    "Eugene Dong",
+    "Jr."
+   ],
+   [
+    "Goodlin",
+    "R.C."
+   ]
+  ],
+  "year": 1975,
+  "journal": "Proceedings of the IEEE",
+  "short_journal": "Proc. IEEE",
+  "volume": "63",
+  "issue": "12",
+  "page": "1692-1716",
+  "article": "",
+  "doi": "10.1109/proc.1975.10036",
+  "type": "journal-article",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)"
+ },
+ "mullen2015": {
+  "status": "OK",
+  "title": "Real-time neuroimaging and cognitive monitoring using wearable dry EEG",
+  "authors": [
+   [
+    "Mullen",
+    "Tim R."
+   ],
+   [
+    "Kothe",
+    "Christian A. E."
+   ],
+   [
+    "Chi",
+    "Yu Mike"
+   ],
+   [
+    "Ojeda",
+    "Alejandro"
+   ],
+   [
+    "Kerth",
+    "Trevor"
+   ],
+   [
+    "Makeig",
+    "Scott"
+   ],
+   [
+    "Jung",
+    "Tzyy-Ping"
+   ],
+   [
+    "Cauwenberghs",
+    "Gert"
+   ]
+  ],
+  "year": 2015,
+  "journal": "IEEE Transactions on Biomedical Engineering",
+  "short_journal": "IEEE Trans. Biomed. Eng.",
+  "volume": "62",
+  "issue": "11",
+  "page": "2553-2567",
+  "article": "",
+  "doi": "10.1109/tbme.2015.2481482",
+  "type": "journal-article",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)"
+ },
+ "chang2020": {
+  "status": "OK",
+  "title": "Evaluation of Artifact Subspace Reconstruction for Automatic Artifact Components Removal in Multi-Channel EEG Recordings",
+  "authors": [
+   [
+    "Chang",
+    "Chi-Yuan"
+   ],
+   [
+    "Hsu",
+    "Sheng-Hsiou"
+   ],
+   [
+    "Pion-Tonachini",
+    "Luca"
+   ],
+   [
+    "Jung",
+    "Tzyy-Ping"
+   ]
+  ],
+  "year": 2020,
+  "journal": "IEEE Transactions on Biomedical Engineering",
+  "short_journal": "IEEE Trans. Biomed. Eng.",
+  "volume": "67",
+  "issue": "4",
+  "page": "1114-1121",
+  "article": "",
+  "doi": "10.1109/tbme.2019.2930186",
+  "type": "journal-article",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)"
+ },
+ "blum2019": {
+  "status": "OK",
+  "title": "A Riemannian Modification of Artifact Subspace Reconstruction for EEG Artifact Handling",
+  "authors": [
+   [
+    "Blum",
+    "Sarah"
+   ],
+   [
+    "Jacobsen",
+    "Nadine S. J."
+   ],
+   [
+    "Bleichner",
+    "Martin G."
+   ],
+   [
+    "Debener",
+    "Stefan"
+   ]
+  ],
+  "year": 2019,
+  "journal": "Frontiers in Human Neuroscience",
+  "short_journal": "Front. Hum. Neurosci.",
+  "volume": "13",
+  "issue": "",
+  "page": "",
+  "article": "141",
+  "doi": "10.3389/fnhum.2019.00141",
+  "type": "journal-article",
+  "publisher": "Frontiers Media SA"
+ },
+ "sweeney2012": {
+  "status": "OK",
+  "title": "Artifact Removal in Physiological Signals—Practices and Possibilities",
+  "authors": [
+   [
+    "Sweeney",
+    "K. T."
+   ],
+   [
+    "Ward",
+    "T. E."
+   ],
+   [
+    "McLoone",
+    "S. F."
+   ]
+  ],
+  "year": 2012,
+  "journal": "IEEE Transactions on Information Technology in Biomedicine",
+  "short_journal": "IEEE Trans. Inform. Technol. Biomed.",
+  "volume": "16",
+  "issue": "3",
+  "page": "488-500",
+  "article": "",
+  "doi": "10.1109/titb.2012.2188536",
+  "type": "journal-article",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)"
+ },
+ "sweeney2013": {
+  "status": "OK",
+  "title": "The Use of Ensemble Empirical Mode Decomposition With Canonical Correlation Analysis as a Novel Artifact Removal Technique",
+  "authors": [
+   [
+    "Sweeney",
+    "Kevin T."
+   ],
+   [
+    "McLoone",
+    "Seán F."
+   ],
+   [
+    "Ward",
+    "Tomás E."
+   ]
+  ],
+  "year": 2013,
+  "journal": "IEEE Transactions on Biomedical Engineering",
+  "short_journal": "IEEE Trans. Biomed. Eng.",
+  "volume": "60",
+  "issue": "1",
+  "page": "97-105",
+  "article": "",
+  "doi": "10.1109/tbme.2012.2225427",
+  "type": "journal-article",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)"
+ },
+ "uriguen2015": {
+  "status": "OK",
+  "title": "EEG artifact removal—state-of-the-art and guidelines",
+  "authors": [
+   [
+    "Urigüen",
+    "Jose Antonio"
+   ],
+   [
+    "Garcia-Zapirain",
+    "Begoña"
+   ]
+  ],
+  "year": 2015,
+  "journal": "Journal of Neural Engineering",
+  "short_journal": "J. Neural Eng.",
+  "volume": "12",
+  "issue": "3",
+  "page": "031001",
+  "article": "",
+  "doi": "10.1088/1741-2560/12/3/031001",
+  "type": "journal-article",
+  "publisher": "IOP Publishing"
+ },
+ "blankertz2011": {
+  "status": "OK",
+  "title": "Single-trial analysis and classification of ERP components — A tutorial",
+  "authors": [
+   [
+    "Blankertz",
+    "Benjamin"
+   ],
+   [
+    "Lemm",
+    "Steven"
+   ],
+   [
+    "Treder",
+    "Matthias"
+   ],
+   [
+    "Haufe",
+    "Stefan"
+   ],
+   [
+    "Müller",
+    "Klaus-Robert"
+   ]
+  ],
+  "year": 2011,
+  "journal": "NeuroImage",
+  "short_journal": "NeuroImage",
+  "volume": "56",
+  "issue": "2",
+  "page": "814-825",
+  "article": "",
+  "doi": "10.1016/j.neuroimage.2010.06.048",
+  "type": "journal-article",
+  "publisher": "Elsevier BV"
+ },
+ "lin2006": {
+  "status": "OK",
+  "title": "Frequency recognition based on canonical correlation analysis for SSVEP-based BCIs",
+  "authors": [
+   [
+    "Lin",
+    "Zhonglin"
+   ],
+   [
+    "Zhang",
+    "Changshui"
+   ],
+   [
+    "Wu",
+    "Wei"
+   ],
+   [
+    "Gao",
+    "Xiaorong"
+   ]
+  ],
+  "year": 2007,
+  "journal": "IEEE Transactions on Biomedical Engineering",
+  "short_journal": "IEEE Trans. Biomed. Eng.",
+  "volume": "54",
+  "issue": "6",
+  "page": "1172-1176",
+  "article": "",
+  "doi": "10.1109/tbme.2006.889197",
+  "type": "journal-article",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)"
+ },
+ "holm1979": {
+  "status": "OK",
+  "title": "A simple sequentially rejective multiple test procedure",
+  "authors": [
+   [
+    "Holm",
+    "Sture"
+   ]
+  ],
+  "year": 1979,
+  "journal": "Scandinavian Journal of Statistics",
+  "volume": "6",
+  "page": "65-70",
+  "doi": "10.2307/4615733",
+  "verified_by": "OpenAlex (JSTOR DOI)"
+ },
+ "hodges1963": {
+  "status": "OK",
+  "title": "Estimates of Location Based on Rank Tests",
+  "authors": [
+   [
+    "Hodges",
+    "J. L."
+   ],
+   [
+    "Lehmann",
+    "E. L."
+   ]
+  ],
+  "year": 1963,
+  "journal": "The Annals of Mathematical Statistics",
+  "short_journal": "Ann. Math. Statist.",
+  "volume": "34",
+  "issue": "2",
+  "page": "598-611",
+  "article": "",
+  "doi": "10.1214/aoms/1177704172",
+  "type": "journal-article",
+  "publisher": "Institute of Mathematical Statistics"
+ },
+ "wilcoxon1945": {
+  "status": "OK",
+  "title": "Individual Comparisons by Ranking Methods",
+  "authors": [
+   [
+    "Wilcoxon",
+    "Frank"
+   ]
+  ],
+  "year": 1945,
+  "journal": "Biometrics Bulletin",
+  "short_journal": "Biometrics Bulletin",
+  "volume": "1",
+  "issue": "6",
+  "page": "80",
+  "article": "",
+  "doi": "10.2307/3001968",
+  "type": "journal-article",
+  "publisher": "JSTOR"
+ },
+ "varoquaux2018": {
+  "status": "OK",
+  "title": "Cross-validation failure: Small sample sizes lead to large error bars",
+  "authors": [
+   [
+    "Varoquaux",
+    "Gaël"
+   ]
+  ],
+  "year": 2018,
+  "journal": "NeuroImage",
+  "short_journal": "NeuroImage",
+  "volume": "180",
+  "issue": "",
+  "page": "68-77",
+  "article": "",
+  "doi": "10.1016/j.neuroimage.2017.06.061",
+  "type": "journal-article",
+  "publisher": "Elsevier BV"
+ },
+ "gramfort2013": {
+  "status": "OK",
+  "title": "MEG and EEG data analysis with MNE-Python",
+  "authors": [
+   [
+    "Gramfort",
+    "Alexandre"
+   ]
+  ],
+  "year": 2013,
+  "journal": "Frontiers in Neuroscience",
+  "volume": "7",
+  "issue": "",
+  "page": "",
+  "article": "",
+  "doi": "10.3389/fnins.2013.00267",
+  "type": "journal-article",
+  "publisher": "Frontiers Media SA"
+ },
+ "pedregosa2011": {
+  "status": "OK",
+  "title": "Scikit-learn: Machine learning in Python",
+  "authors": [
+   [
+    "Pedregosa",
+    "Fabian"
+   ],
+   [
+    "Varoquaux",
+    "Gaël"
+   ],
+   [
+    "Gramfort",
+    "Alexandre"
+   ],
+   [
+    "Michel",
+    "Vincent"
+   ],
+   [
+    "Thirion",
+    "Bertrand"
+   ],
+   [
+    "Grisel",
+    "Olivier"
+   ],
+   [
+    "Blondel",
+    "Mathieu"
+   ],
+   [
+    "Prettenhofer",
+    "Peter"
+   ],
+   [
+    "Weiss",
+    "Ron"
+   ],
+   [
+    "Dubourg",
+    "Vincent"
+   ],
+   [
+    "Vanderplas",
+    "Jake"
+   ],
+   [
+    "Passos",
+    "Alexandre"
+   ],
+   [
+    "Cournapeau",
+    "David"
+   ],
+   [
+    "Brucher",
+    "Matthieu"
+   ],
+   [
+    "Perrot",
+    "Matthieu"
+   ],
+   [
+    "Duchesnay",
+    "Édouard"
+   ]
+  ],
+  "year": 2011,
+  "journal": "Journal of Machine Learning Research",
+  "volume": "12",
+  "page": "2825-2830",
+  "doi": "",
+  "verified_by": "jmlr.org/papers/v12/pedregosa11a.html"
+ },
+ "virtanen2020": {
+  "status": "OK",
+  "title": "SciPy 1.0: fundamental algorithms for scientific computing in Python",
+  "authors": [
+   [
+    "Virtanen",
+    "Pauli"
+   ],
+   [
+    "Gommers",
+    "Ralf"
+   ],
+   [
+    "Oliphant",
+    "Travis E."
+   ],
+   [
+    "Haberland",
+    "Matt"
+   ],
+   [
+    "Reddy",
+    "Tyler"
+   ],
+   [
+    "Cournapeau",
+    "David"
+   ],
+   [
+    "Burovski",
+    "Evgeni"
+   ],
+   [
+    "Peterson",
+    "Pearu"
+   ],
+   [
+    "Weckesser",
+    "Warren"
+   ],
+   [
+    "Bright",
+    "Jonathan"
+   ],
+   [
+    "van der Walt",
+    "Stéfan J."
+   ],
+   [
+    "Brett",
+    "Matthew"
+   ],
+   [
+    "Wilson",
+    "Joshua"
+   ],
+   [
+    "Millman",
+    "K. Jarrod"
+   ],
+   [
+    "Mayorov",
+    "Nikolay"
+   ],
+   [
+    "Nelson",
+    "Andrew R. J."
+   ],
+   [
+    "Jones",
+    "Eric"
+   ],
+   [
+    "Kern",
+    "Robert"
+   ],
+   [
+    "Larson",
+    "Eric"
+   ],
+   [
+    "Carey",
+    "C J"
+   ],
+   [
+    "Polat",
+    "İlhan"
+   ],
+   [
+    "Feng",
+    "Yu"
+   ],
+   [
+    "Moore",
+    "Eric W."
+   ],
+   [
+    "VanderPlas",
+    "Jake"
+   ],
+   [
+    "Laxalde",
+    "Denis"
+   ],
+   [
+    "Perktold",
+    "Josef"
+   ],
+   [
+    "Cimrman",
+    "Robert"
+   ],
+   [
+    "Henriksen",
+    "Ian"
+   ],
+   [
+    "Quintero",
+    "E. A."
+   ],
+   [
+    "Harris",
+    "Charles R."
+   ],
+   [
+    "Archibald",
+    "Anne M."
+   ],
+   [
+    "Ribeiro",
+    "Antônio H."
+   ],
+   [
+    "Pedregosa",
+    "Fabian"
+   ],
+   [
+    "van Mulbregt",
+    "Paul"
+   ],
+   [
+    "",
+    ""
+   ],
+   [
+    "Vijaykumar",
+    "Aditya"
+   ],
+   [
+    "Bardelli",
+    "Alessandro Pietro"
+   ],
+   [
+    "Rothberg",
+    "Alex"
+   ],
+   [
+    "Hilboll",
+    "Andreas"
+   ],
+   [
+    "Kloeckner",
+    "Andreas"
+   ],
+   [
+    "Scopatz",
+    "Anthony"
+   ],
+   [
+    "Lee",
+    "Antony"
+   ],
+   [
+    "Rokem",
+    "Ariel"
+   ],
+   [
+    "Woods",
+    "C. Nathan"
+   ],
+   [
+    "Fulton",
+    "Chad"
+   ],
+   [
+    "Masson",
+    "Charles"
+   ],
+   [
+    "Häggström",
+    "Christian"
+   ],
+   [
+    "Fitzgerald",
+    "Clark"
+   ],
+   [
+    "Nicholson",
+    "David A."
+   ],
+   [
+    "Hagen",
+    "David R."
+   ],
+   [
+    "Pasechnik",
+    "Dmitrii V."
+   ],
+   [
+    "Olivetti",
+    "Emanuele"
+   ],
+   [
+    "Martin",
+    "Eric"
+   ],
+   [
+    "Wieser",
+    "Eric"
+   ],
+   [
+    "Silva",
+    "Fabrice"
+   ],
+   [
+    "Lenders",
+    "Felix"
+   ],
+   [
+    "Wilhelm",
+    "Florian"
+   ],
+   [
+    "Young",
+    "G."
+   ],
+   [
+    "Price",
+    "Gavin A."
+   ],
+   [
+    "Ingold",
+    "Gert-Ludwig"
+   ],
+   [
+    "Allen",
+    "Gregory E."
+   ],
+   [
+    "Lee",
+    "Gregory R."
+   ],
+   [
+    "Audren",
+    "Hervé"
+   ],
+   [
+    "Probst",
+    "Irvin"
+   ],
+   [
+    "Dietrich",
+    "Jörg P."
+   ],
+   [
+    "Silterra",
+    "Jacob"
+   ],
+   [
+    "Webber",
+    "James T"
+   ],
+   [
+    "Slavič",
+    "Janko"
+   ],
+   [
+    "Nothman",
+    "Joel"
+   ],
+   [
+    "Buchner",
+    "Johannes"
+   ],
+   [
+    "Kulick",
+    "Johannes"
+   ],
+   [
+    "Schönberger",
+    "Johannes L."
+   ],
+   [
+    "de Miranda Cardoso",
+    "José Vinícius"
+   ],
+   [
+    "Reimer",
+    "Joscha"
+   ],
+   [
+    "Harrington",
+    "Joseph"
+   ],
+   [
+    "Rodríguez",
+    "Juan Luis Cano"
+   ],
+   [
+    "Nunez-Iglesias",
+    "Juan"
+   ],
+   [
+    "Kuczynski",
+    "Justin"
+   ],
+   [
+    "Tritz",
+    "Kevin"
+   ],
+   [
+    "Thoma",
+    "Martin"
+   ],
+   [
+    "Newville",
+    "Matthew"
+   ],
+   [
+    "Kümmerer",
+    "Matthias"
+   ],
+   [
+    "Bolingbroke",
+    "Maximilian"
+   ],
+   [
+    "Tartre",
+    "Michael"
+   ],
+   [
+    "Pak",
+    "Mikhail"
+   ],
+   [
+    "Smith",
+    "Nathaniel J."
+   ],
+   [
+    "Nowaczyk",
+    "Nikolai"
+   ],
+   [
+    "Shebanov",
+    "Nikolay"
+   ],
+   [
+    "Pavlyk",
+    "Oleksandr"
+   ],
+   [
+    "Brodtkorb",
+    "Per A."
+   ],
+   [
+    "Lee",
+    "Perry"
+   ],
+   [
+    "McGibbon",
+    "Robert T."
+   ],
+   [
+    "Feldbauer",
+    "Roman"
+   ],
+   [
+    "Lewis",
+    "Sam"
+   ],
+   [
+    "Tygier",
+    "Sam"
+   ],
+   [
+    "Sievert",
+    "Scott"
+   ],
+   [
+    "Vigna",
+    "Sebastiano"
+   ],
+   [
+    "Peterson",
+    "Stefan"
+   ],
+   [
+    "More",
+    "Surhud"
+   ],
+   [
+    "Pudlik",
+    "Tadeusz"
+   ],
+   [
+    "Oshima",
+    "Takuya"
+   ],
+   [
+    "Pingel",
+    "Thomas J."
+   ],
+   [
+    "Robitaille",
+    "Thomas P."
+   ],
+   [
+    "Spura",
+    "Thomas"
+   ],
+   [
+    "Jones",
+    "Thouis R."
+   ],
+   [
+    "Cera",
+    "Tim"
+   ],
+   [
+    "Leslie",
+    "Tim"
+   ],
+   [
+    "Zito",
+    "Tiziano"
+   ],
+   [
+    "Krauss",
+    "Tom"
+   ],
+   [
+    "Upadhyay",
+    "Utkarsh"
+   ],
+   [
+    "Halchenko",
+    "Yaroslav O."
+   ],
+   [
+    "Vázquez-Baeza",
+    "Yoshiki"
+   ]
+  ],
+  "year": 2020,
+  "journal": "Nature Methods",
+  "volume": "17",
+  "issue": "3",
+  "page": "261-272",
+  "article": "",
+  "doi": "10.1038/s41592-019-0686-2",
+  "type": "journal-article",
+  "publisher": "Springer Science and Business Media LLC"
+ },
+ "harris2020": {
+  "status": "OK",
+  "title": "Array programming with NumPy",
+  "authors": [
+   [
+    "Harris",
+    "Charles R."
+   ],
+   [
+    "Millman",
+    "K. Jarrod"
+   ],
+   [
+    "van der Walt",
+    "Stéfan J."
+   ],
+   [
+    "Gommers",
+    "Ralf"
+   ],
+   [
+    "Virtanen",
+    "Pauli"
+   ],
+   [
+    "Cournapeau",
+    "David"
+   ],
+   [
+    "Wieser",
+    "Eric"
+   ],
+   [
+    "Taylor",
+    "Julian"
+   ],
+   [
+    "Berg",
+    "Sebastian"
+   ],
+   [
+    "Smith",
+    "Nathaniel J."
+   ],
+   [
+    "Kern",
+    "Robert"
+   ],
+   [
+    "Picus",
+    "Matti"
+   ],
+   [
+    "Hoyer",
+    "Stephan"
+   ],
+   [
+    "van Kerkwijk",
+    "Marten H."
+   ],
+   [
+    "Brett",
+    "Matthew"
+   ],
+   [
+    "Haldane",
+    "Allan"
+   ],
+   [
+    "del Río",
+    "Jaime Fernández"
+   ],
+   [
+    "Wiebe",
+    "Mark"
+   ],
+   [
+    "Peterson",
+    "Pearu"
+   ],
+   [
+    "Gérard-Marchant",
+    "Pierre"
+   ],
+   [
+    "Sheppard",
+    "Kevin"
+   ],
+   [
+    "Reddy",
+    "Tyler"
+   ],
+   [
+    "Weckesser",
+    "Warren"
+   ],
+   [
+    "Abbasi",
+    "Hameer"
+   ],
+   [
+    "Gohlke",
+    "Christoph"
+   ],
+   [
+    "Oliphant",
+    "Travis E."
+   ]
+  ],
+  "year": 2020,
+  "journal": "Nature",
+  "volume": "585",
+  "issue": "7825",
+  "page": "357-362",
+  "article": "",
+  "doi": "10.1038/s41586-020-2649-2",
+  "type": "journal-article",
+  "publisher": "Springer Science and Business Media LLC"
+ },
+ "decheveigne2018": {
+  "status": "OK",
+  "title": "Robust detrending, rereferencing, outlier detection, and inpainting for multichannel data",
+  "authors": [
+   [
+    "de Cheveigné",
+    "Alain"
+   ],
+   [
+    "Arzounian",
+    "Dorothée"
+   ]
+  ],
+  "year": 2018,
+  "journal": "NeuroImage",
+  "short_journal": "NeuroImage",
+  "volume": "172",
+  "issue": "",
+  "page": "903-912",
+  "article": "",
+  "doi": "10.1016/j.neuroimage.2018.01.035",
+  "type": "journal-article",
+  "publisher": "Elsevier BV"
+ },
+ "cervera2018": {
+  "status": "OK",
+  "title": "Brain‐computer interfaces for post‐stroke motor rehabilitation: a meta‐analysis",
+  "authors": [
+   [
+    "Cervera",
+    "María A."
+   ],
+   [
+    "Soekadar",
+    "Surjo R."
+   ],
+   [
+    "Ushiba",
+    "Junichi"
+   ],
+   [
+    "Millán",
+    "José del R."
+   ],
+   [
+    "Liu",
+    "Meigen"
+   ],
+   [
+    "Birbaumer",
+    "Niels"
+   ],
+   [
+    "Garipelli",
+    "Gangadhar"
+   ]
+  ],
+  "year": 2018,
+  "journal": "Annals of Clinical and Translational Neurology",
+  "volume": "5",
+  "issue": "5",
+  "page": "651-663",
+  "article": "",
+  "doi": "10.1002/acn3.544",
+  "type": "journal-article",
+  "publisher": "Wiley"
+ },
+ "wagner2012": {
+  "status": "OK",
+  "title": "Level of participation in robotic-assisted treadmill walking modulates midline sensorimotor EEG rhythms in able-bodied subjects",
+  "authors": [
+   [
+    "Wagner",
+    "Johanna"
+   ],
+   [
+    "Solis-Escalante",
+    "Teodoro"
+   ],
+   [
+    "Grieshofer",
+    "Peter"
+   ],
+   [
+    "Neuper",
+    "Christa"
+   ],
+   [
+    "Müller-Putz",
+    "Gernot"
+   ],
+   [
+    "Scherer",
+    "Reinhold"
+   ]
+  ],
+  "year": 2012,
+  "journal": "NeuroImage",
+  "short_journal": "NeuroImage",
+  "volume": "63",
+  "issue": "3",
+  "page": "1203-1211",
+  "article": "",
+  "doi": "10.1016/j.neuroimage.2012.08.019",
+  "type": "journal-article",
+  "publisher": "Elsevier BV"
+ },
+ "lotte2018": {
+  "status": "OK",
+  "title": "A review of classification algorithms for EEG-based brain–computer interfaces: a 10 year update",
+  "authors": [
+   [
+    "Lotte",
+    "F"
+   ],
+   [
+    "Bougrain",
+    "L"
+   ],
+   [
+    "Cichocki",
+    "A"
+   ],
+   [
+    "Clerc",
+    "M"
+   ],
+   [
+    "Congedo",
+    "M"
+   ],
+   [
+    "Rakotomamonjy",
+    "A"
+   ],
+   [
+    "Yger",
+    "F"
+   ]
+  ],
+  "year": 2018,
+  "journal": "Journal of Neural Engineering",
+  "short_journal": "J. Neural Eng.",
+  "volume": "15",
+  "issue": "3",
+  "page": "031005",
+  "article": "",
+  "doi": "10.1088/1741-2552/aab2f2",
+  "type": "journal-article",
+  "publisher": "IOP Publishing"
+ },
+ "jacobsen2021": {
+  "status": "OK",
+  "title": "Mobile electroencephalography captures differences of walking over even and uneven terrain but not of single and dual-task gait",
+  "authors": [
+   [
+    "Jacobsen",
+    "Nadine Svenja Josée"
+   ],
+   [
+    "Blum",
+    "Sarah"
+   ],
+   [
+    "Scanlon",
+    "Joanna Elizabeth Mary"
+   ],
+   [
+    "Witt",
+    "Karsten"
+   ],
+   [
+    "Debener",
+    "Stefan"
+   ]
+  ],
+  "year": 2022,
+  "journal": "Frontiers in Sports and Active Living",
+  "short_journal": "Front. Sports Act. Living",
+  "volume": "4",
+  "issue": "",
+  "page": "",
+  "article": "945341",
+  "doi": "10.3389/fspor.2022.945341",
+  "type": "journal-article",
+  "publisher": "Frontiers Media SA"
+ },
+ "efron1993": {
+  "status": "OK",
+  "title": "An Introduction to the Bootstrap",
+  "authors": [
+   [
+    "Efron",
+    "Bradley"
+   ],
+   [
+    "Tibshirani",
+    "Robert J."
+   ]
+  ],
+  "year": 1993,
+  "journal": "",
+  "volume": "",
+  "issue": "",
+  "page": "",
+  "article": "",
+  "doi": "10.1007/978-1-4899-4541-9",
+  "type": "book",
+  "publisher": "Springer US"
+ },
+ "artoni2017": {
+  "status": "OK",
+  "title": "Unidirectional brain to muscle connectivity reveals motor cortex control of leg muscles during stereotyped walking",
+  "authors": [
+   [
+    "Artoni",
+    "Fiorenzo"
+   ],
+   [
+    "Fanciullacci",
+    "Chiara"
+   ],
+   [
+    "Bertolucci",
+    "Federica"
+   ],
+   [
+    "Panarese",
+    "Alessandro"
+   ],
+   [
+    "Makeig",
+    "Scott"
+   ],
+   [
+    "Micera",
+    "Silvestro"
+   ],
+   [
+    "Chisari",
+    "Carmelo"
+   ]
+  ],
+  "year": 2017,
+  "journal": "NeuroImage",
+  "short_journal": "NeuroImage",
+  "volume": "159",
+  "issue": "",
+  "page": "403-416",
+  "article": "",
+  "doi": "10.1016/j.neuroimage.2017.07.013",
+  "type": "journal-article",
+  "publisher": "Elsevier BV"
+ },
+ "kothe2013": {
+  "status": "OK",
+  "title": "BCILAB: a platform for brain–computer interface development",
+  "authors": [
+   [
+    "Kothe",
+    "Christian Andreas"
+   ],
+   [
+    "Makeig",
+    "Scott"
+   ]
+  ],
+  "year": 2013,
+  "journal": "Journal of Neural Engineering",
+  "short_journal": "J. Neural Eng.",
+  "volume": "10",
+  "issue": "5",
+  "page": "056014",
+  "article": "",
+  "doi": "10.1088/1741-2560/10/5/056014",
+  "type": "journal-article",
+  "publisher": "IOP Publishing"
+ }
+}
