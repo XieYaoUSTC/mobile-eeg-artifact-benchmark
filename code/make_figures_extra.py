@@ -157,7 +157,7 @@ if 'gate' in FIGS:
     ax = axes[0]
     ax.semilogy(t, np.maximum(e, 1e-3), color='tab:green', lw=0.8)
     ax.axhline(100, color='k', ls='--', lw=0.8, label='θ = 100 (on)'); ax.axhline(40, color='gray', ls=':', lw=0.8, label='0.4θ (off)')
-    ax.axvline(tj, color='tab:red', lw=0.8); ax.set_ylabel('Motion energy ratio\n(head, 0.7–4 Hz, 2-s trailing)')
+    ax.axvline(tj, color='tab:red', lw=0.8); ax.set_ylabel('Motion energy ratio')
     ax.legend(fontsize=7, loc='upper left', frameon=False); ax.set_title(f'Participant {SUB}: standing SSVEP recording followed by the 1.6 m/s recording (junction at {tj:.0f} s)', fontsize=8)
     ax = axes[1]
     ax.fill_between(t, 0, gate, step='post', color='tab:red', alpha=.5); ax.set_ylim(-0.1, 1.2); ax.set_yticks([0, 1]); ax.set_yticklabels(['off', 'on'])
@@ -170,11 +170,12 @@ if 'gate' in FIGS:
     ax.plot(t[w0:w1], X[oz, w0:w1], color='k', lw=0.7, label='Oz, causal front end')
     ax.plot(t[w0:w1], Xc[oz, w0:w1], color='tab:red', lw=0.7, alpha=.8, label='Oz, gated NLMS')
     ax.axvline(tj, color='tab:red', lw=0.8); ax.axvline(first_on, color='tab:red', ls=':', lw=0.8)
-    ax.set_xlim(t[w0], t[w1 - 1]); ax.set_xlabel('Time (s)'); ax.set_ylabel('Oz (µV)'); ax.legend(fontsize=7, loc='upper left', frameon=False)
+    ax.set_xlim(t[w0], t[w1 - 1]); ax.set_xlabel('Time (s)'); ax.set_ylabel('Oz (µV)'); ax.legend(fontsize=7, loc='upper right', frameon=False)
     ax.text(tj + 0.3, ax.get_ylim()[1] * 0.85, 'walking starts', fontsize=7, color='tab:red'); ax.text(first_on + 0.3, ax.get_ylim()[1] * 0.85, 'gate opens', fontsize=7, color='tab:red')
+    fig.tight_layout()
     for k, a in enumerate(axes):
-        a.text(-0.1, 1.04, f'({chr(97 + k)})', transform=a.transAxes, fontsize=10, weight='bold')
-    fig.tight_layout(); save(fig, 'fig_gate')
+        pos = a.get_position(); fig.text(0.012, pos.y1 + 0.008, f'({chr(97 + k)})', fontsize=10, weight='bold', va='bottom')
+    save(fig, 'fig_gate')
     print('fig_gate done', flush=True)
 
 
@@ -201,8 +202,8 @@ if 'probe' in FIGS:
 
 
     res = dict(Parallel(n_jobs=N_JOBS)(delayed(removed_var)(s) for s in subs))
-    fig = plt.figure(figsize=(7.2, 3.4))
-    gs = fig.add_gridspec(1, 4, width_ratios=[1.6, 1, 1, 1])
+    fig = plt.figure(figsize=(7.2, 3.6))
+    gs = fig.add_gridspec(1, 4, width_ratios=[1.6, 1, 1, 1], left=0.09, right=0.86, bottom=0.17, top=0.86, wspace=0.12)
     ax = fig.add_subplot(gs[0, 0])
     sp_ = ['0.0', '0.8', '1.6', '2.0']
     for key, lab, col, ls in [('none_corr_true', 'attended freq., no processing', 'k', '-'), ('none_corr_wrong', 'best other freq., no processing', 'k', '--'),
@@ -211,8 +212,8 @@ if 'probe' in FIGS:
         v = [P[f'{s}_{key}']['mean'] for s in sp_]
         ax.plot(range(4), v, color=col, ls=ls, marker='o', ms=3, lw=1, label=lab)
     ax.set_xticks(range(4)); ax.set_xticklabels(['0', '0.8', '1.6', '2.0']); ax.set_xlabel('Treadmill speed (m/s)'); ax.set_ylabel('Mean CCA correlation per trial')
-    ax.legend(fontsize=5.5, frameon=False, loc='center right'); ax.grid(alpha=.3); ax.set_title('SSVEP signal probe', fontsize=8)
-    ax.text(-0.25, 1.05, '(a)', transform=ax.transAxes, fontsize=10, weight='bold')
+    ax.legend(fontsize=5.5, frameon=False, loc='upper right'); ax.grid(alpha=.3); ax.set_title('SSVEP signal probe', fontsize=8)
+    ax.text(-0.3, 1.06, '(a)', transform=ax.transAxes, fontsize=10, weight='bold')
     vmax = 0
     maps = {}
     for sp in ['0.8', '1.6', '2.0']:
@@ -225,9 +226,9 @@ if 'probe' in FIGS:
         clab, m, n = maps[sp]
         im, _ = mne.viz.plot_topomap(m, info, axes=ax, show=False, cmap='Reds', vlim=(0, vmax), contours=4, sensors=True)
         ax.set_title(f'{sp} m/s (n={n})', fontsize=8)
-    cb = fig.colorbar(im, ax=fig.axes[1:], shrink=0.7, pad=0.02); cb.set_label('Fraction of EEG variance removed by reg', fontsize=7); cb.ax.tick_params(labelsize=6)
-    fig.text(0.62, 0.95, 'Variance removed by lagged IMU regression (ERP recordings)', ha='center', fontsize=8)
-    fig.text(0.40, 0.95, '(b)', fontsize=10, weight='bold')
+    cax = fig.add_axes([0.885, 0.3, 0.012, 0.42]); cb = fig.colorbar(im, cax=cax); cb.set_label('Fraction of EEG variance removed by reg', fontsize=7); cb.ax.tick_params(labelsize=6)
+    fig.text(0.43, 0.955, 'Variance removed by lagged IMU regression (ERP recordings)', ha='left', fontsize=8)
+    fig.text(0.375, 0.945, '(b)', fontsize=10, weight='bold')
     save(fig, 'fig_probe_topo')
     json.dump({sp: {'channels': maps[sp][0], 'mean_removed_fraction': maps[sp][1].tolist(), 'n': maps[sp][2]} for sp in maps}, open(os.path.join(ROOT, 'results', 'p1_clean_eval', 'removed_variance_topo.json'), 'w'), indent=1)
     print('fig_probe_topo done', flush=True)

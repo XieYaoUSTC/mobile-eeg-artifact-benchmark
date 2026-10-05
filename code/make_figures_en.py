@@ -150,6 +150,6 @@ for k, sp in enumerate(['0.8', '1.6', '2.0']):
         ax.set_ylabel('Oz median PSD ($\\mu$V$^2$/Hz)'); ax.legend(fontsize=6, loc='upper right', frameon=False)
     if k == 2:
         ax2.set_ylabel('Head acceleration PSD (a.u.)', fontsize=7, color='tab:green')
-        ax2.legend(fontsize=6, loc='lower left', frameon=False)
+        ax2.legend(fontsize=6, loc='upper right', frameon=False)
 fig.tight_layout(); save(fig, 'fig4_spectra')
 print('figures written to', OUT)
