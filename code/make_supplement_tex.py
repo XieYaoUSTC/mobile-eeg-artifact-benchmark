@@ -69,6 +69,7 @@ cca_choice = '/'.join(sorted(set(T['heldout']['cca_ho']['fold_choices'])))
 L = [r"""\documentclass[12pt]{iopart}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{graphicx}
 \usepackage{iopams}
 \usepackage{longtable}
