@@ -1,0 +1,137 @@
+{
+ "meta": {
+  "ledwidge2025": {
+   "doi": "10.3390/s25154810",
+   "title": "A Comparison of Approaches for Motion Artifact Removal from Wireless Mobile EEG During Overground Running",
+   "journal": "Sensors",
+   "year": 2025,
+   "volume": "25",
+   "page": "4810",
+   "first": "Ledwidge"
+  },
+  "yang2023": {
+   "doi": "10.1109/tnsre.2023.3319355",
+   "title": "Movement Artifact Suppression in Wearable Low-Density and Dry EEG Recordings Using Active Electrodes and Artifact Subspace Reconstruction",
+   "journal": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+   "year": 2023,
+   "volume": "31",
+   "page": "3844--3853",
+   "first": "Yang"
+  },
+  "sattari2026": {
+   "doi": "10.1109/tbme.2025.3630112",
+   "title": "Contrast-Based Artifact Removal Enables Microstate Analysis in Ambulatory EEG",
+   "journal": "IEEE Transactions on Biomedical Engineering",
+   "year": 2026,
+   "volume": "73",
+   "page": "2351--2361",
+   "first": "Sattari"
+  },
+  "li2025": {
+   "doi": "10.1038/s41598-025-31782-9",
+   "title": "Dual-sided EEG electrode signals have varying correlations that depend on movement characteristics",
+   "journal": "Scientific Reports",
+   "year": 2025,
+   "volume": "16",
+   "page": "426",
+   "first": "Li"
+  },
+  "schmoigl2023": {
+   "doi": "10.3389/fnhum.2023.1251690",
+   "title": "Methods for motion artifact reduction in online brain-computer interface experiments: a systematic review",
+   "journal": "Frontiers in Human Neuroscience",
+   "year": 2023,
+   "volume": "17",
+   "page": "1251690",
+   "first": "Schmoigl-Tonis"
+  },
+  "jacobsen2025": {
+   "doi": "10.1111/psyp.14743",
+   "title": "Preprocessing choices for\n                    <scp>P3</scp>\n                    analyses with mobile\n                    <scp>EEG</scp>\n                    : A systematic literature review and interactive exploration",
+   "journal": "Psychophysiology",
+   "year": 2024,
+   "volume": "62",
+   "page": "e14743",
+   "first": "Jacobsen"
+  },
+  "vinod2026": {
+   "doi": "10.1111/psyp.70352",
+   "title": "Preprocessing on the Go: Practices in Gait‐Related Mobile\n                    <scp>EEG</scp>",
+   "journal": "Psychophysiology",
+   "year": 2026,
+   "volume": "63",
+   "page": "e70352",
+   "first": "Vinod"
+  },
+  "kolodziej2026": {
+   "doi": "10.3390/s26030917",
+   "title": "Improved SSVEP Classification Through EEG Artifact Reduction Using Auxiliary Sensors",
+   "journal": "Sensors",
+   "year": 2026,
+   "volume": "26",
+   "page": "917",
+   "first": "Kołodziej"
+  },
+  "salminen2025": {
+   "doi": "10.1152/jn.00544.2024",
+   "title": "Gait speed-related changes in electrocortical activity in younger and older adults",
+   "journal": "Journal of Neurophysiology",
+   "year": 2025,
+   "volume": "133",
+   "page": "1761--1794",
+   "first": "Salminen"
+  },
+  "sarkar2026": {
+   "doi": "10.1038/s41597-026-07476-w",
+   "title": "EEG-Controlled Exoskeleton for Walking and Standing: A Longitudinal Multimodal Dataset of Healthy Individuals",
+   "journal": "Scientific Data",
+   "year": 2026,
+   "volume": "13",
+   "page": "1253",
+   "first": "Sarkar"
+  },
+  "kwon2026": {
+   "doi": "10.1109/tnsre.2026.3729803",
+   "title": "Hybrid Brain–Computer Interface for Controlling a Wearable Lower Limb Exoskeleton With Augmented Reality Glasses for Gait Assistance",
+   "journal": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+   "year": 2026,
+   "volume": "34",
+   "page": "3902--3912",
+   "first": "Kwon"
+  },
+  "swerdloff2023": {
+   "doi": "10.1371/journal.pone.0287885",
+   "title": "Dry EEG measurement of P3 to evaluate cognitive load during sitting, standing, and walking",
+   "journal": "PLOS ONE",
+   "year": 2023,
+   "volume": "18",
+   "page": "e0287885",
+   "first": "Swerdloff"
+  },
+  "kim2025": {
+   "doi": "10.1073/pnas.2419304122",
+   "title": "Motion artifact–controlled micro–brain sensors between hair follicles for persistent augmented reality brain–computer interfaces",
+   "journal": "Proceedings of the National Academy of Sciences",
+   "year": 2025,
+   "volume": "122",
+   "page": "e2419304122",
+   "first": "Kim"
+  }
+ },
+ "bib": {
+  "ledwidge2025": "\\bibitem{ledwidge2025} Ledwidge P S, McPherson C N, Faulkenberg L, Morgan A and Baylis G C 2025 A comparison of approaches for motion artifact removal from wireless mobile EEG during overground running {\\it Sensors} {\\bf 25} 4810 (doi:10.3390/s25154810)",
+  "yang2023": "\\bibitem{yang2023} Yang S Y and Lin Y P 2023 Movement artifact suppression in wearable Low-Density and dry EEG recordings using active electrodes and artifact subspace reconstruction {\\it IEEE Trans. Neural Syst. Rehabil. Eng.} {\\bf 31} 3844--3853 (doi:10.1109/tnsre.2023.3319355)",
+  "sattari2026": "\\bibitem{sattari2026} Sattari S, Virji-Babul N and Wu L C 2026 Contrast-Based artifact removal enables microstate analysis in ambulatory EEG {\\it IEEE Trans. Biomed. Eng.} {\\bf 73} 2351--2361 (doi:10.1109/tbme.2025.3630112)",
+  "li2025": "\\bibitem{li2025} Li J and Huang H J 2025 Dual-sided EEG electrode signals have varying correlations that depend on movement characteristics {\\it Sci. Rep.} {\\bf 16} 426 (doi:10.1038/s41598-025-31782-9)",
+  "schmoigl2023": "\\bibitem{schmoigl2023} Schmoigl-Tonis M, Schranz C and Müller-Putz G R 2023 Methods for motion artifact reduction in online brain--computer interface experiments: a systematic review {\\it Front. Hum. Neurosci.} {\\bf 17} 1251690 (doi:10.3389/fnhum.2023.1251690)",
+  "jacobsen2025": "\\bibitem{jacobsen2025} Jacobsen N S J, Kristanto D, Welp S, Inceler Y C and Debener S 2024 Preprocessing choices for P3 analyses with mobile EEG : A systematic literature review and interactive exploration {\\it Psychophysiology} {\\bf 62} e14743 (doi:10.1111/psyp.14743)",
+  "vinod2026": "\\bibitem{vinod2026} Vinod V, Papin L J, Romijnders R, Maetzler W and Welzel J 2026 Preprocessing on the go: practices in Gait‐Related mobile EEG {\\it Psychophysiology} {\\bf 63} e70352 (doi:10.1111/psyp.70352)",
+  "kolodziej2026": "\\bibitem{kolodziej2026} Kołodziej M, Majkowski A and Wiszniewski P 2026 Improved SSVEP classification through EEG artifact reduction using auxiliary sensors {\\it Sensors} {\\bf 26} 917 (doi:10.3390/s26030917)",
+  "salminen2025": "\\bibitem{salminen2025} Salminen J \\etal 2025 Gait speed-related changes in electrocortical activity in younger and older adults {\\it J. Neurophysiol.} {\\bf 133} 1761--1794 (doi:10.1152/jn.00544.2024)",
+  "sarkar2026": "\\bibitem{sarkar2026} Sarkar S, Nathan K, Kilicarslan A, Eguren D, Grossman R and Contreras-Vidal J L 2026 EEG-Controlled exoskeleton for walking and standing: A longitudinal multimodal dataset of healthy individuals {\\it Sci. Data} {\\bf 13} 1253 (doi:10.1038/s41597-026-07476-w)",
+  "kwon2026": "\\bibitem{kwon2026} Kwon J, Han H, Hwang J, Nam S, Lee T, Cha H S, Ahn K H and Im C H 2026 Hybrid Brain--Computer interface for controlling a wearable lower limb exoskeleton with augmented reality glasses for gait assistance {\\it IEEE Trans. Neural Syst. Rehabil. Eng.} {\\bf 34} 3902--3912 (doi:10.1109/tnsre.2026.3729803)",
+  "swerdloff2023": "\\bibitem{swerdloff2023} Swerdloff M M and Hargrove L J 2023 Dry EEG measurement of P3 to evaluate cognitive load during sitting, standing, and walking {\\it PLoS One} {\\bf 18} e0287885 (doi:10.1371/journal.pone.0287885)",
+  "kim2025": "\\bibitem{kim2025} Kim H \\etal 2025 Motion artifact--controlled micro--brain sensors between hair follicles for persistent augmented reality brain--computer interfaces {\\it Proc. Natl Acad. Sci. USA} {\\bf 122} e2419304122 (doi:10.1073/pnas.2419304122)",
+  "wearbci2026": "\\bibitem{wearbci2026} Liu H, Jiang H, Hong L and Ouyang X 2026 WearBCI dataset: understanding and benchmarking real-world wearable brain--computer interface signals {\\it arXiv:2604.09649}"
+ }
+}
