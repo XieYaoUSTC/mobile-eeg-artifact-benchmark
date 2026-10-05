@@ -147,9 +147,10 @@ for k, sp in enumerate(['0.8', '1.6', '2.0']):
     ax.set_title(f'{sp} m/s (n={len(Pe)})', fontsize=8); ax.set_xlabel('Frequency (Hz)'); ax.grid(alpha=.3)
     ax.text(-0.25 if k == 0 else -0.12, 1.08, f'({chr(97 + k)})', transform=ax.transAxes, fontsize=10, weight='bold')
     if k == 0:
-        ax.set_ylabel('Oz median PSD ($\\mu$V$^2$/Hz)'); ax.legend(fontsize=6, loc='upper right', frameon=False)
+        ax.set_ylabel('Oz median PSD ($\\mu$V$^2$/Hz)')
+        h1, l1 = ax.get_legend_handles_labels(); h2, l2 = ax2.get_legend_handles_labels()
+        ax.legend(h1 + h2, l1 + l2, fontsize=6, loc='upper right', frameon=False)
     if k == 2:
         ax2.set_ylabel('Head acceleration PSD (a.u.)', fontsize=7, color='tab:green')
-        ax2.legend(fontsize=6, loc='upper right', frameon=False)
 fig.tight_layout(); save(fig, 'fig4_spectra')
 print('figures written to', OUT)
