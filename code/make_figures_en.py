@@ -125,7 +125,7 @@ for r, sp in enumerate(['1.6', '2.0']):
 axes[0, 0].legend(fontsize=7, frameon=False)
 fig.tight_layout(); save(fig, 'fig3_erp_waveforms')
 
-fig, axes = plt.subplots(1, 3, figsize=(7.2, 2.6))
+fig, axes = plt.subplots(1, 3, figsize=(7.2, 2.9))
 for k, sp in enumerate(['0.8', '1.6', '2.0']):
     Pe, Pr, Pn, Pa = [], [], [], []
     for sub in subs:
@@ -149,8 +149,9 @@ for k, sp in enumerate(['0.8', '1.6', '2.0']):
     if k == 0:
         ax.set_ylabel('Oz median PSD ($\\mu$V$^2$/Hz)')
         h1, l1 = ax.get_legend_handles_labels(); h2, l2 = ax2.get_legend_handles_labels()
-        ax.legend(h1 + h2, l1 + l2, fontsize=6, loc='upper right', frameon=False)
+        LEG = (h1 + h2, l1 + l2)
     if k == 2:
         ax2.set_ylabel('Head acceleration PSD (a.u.)', fontsize=7, color='tab:green')
-fig.tight_layout(); save(fig, 'fig4_spectra')
+fig.legend(LEG[0], LEG[1], fontsize=7, loc='lower center', ncol=4, frameon=False)
+fig.tight_layout(rect=(0, 0.1, 1, 1)); save(fig, 'fig4_spectra')
 print('figures written to', OUT)
