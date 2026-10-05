@@ -93,14 +93,38 @@ def paired(task, sp, a, b, subset=None):
     n = len(d)
     if n == 0:
         return None
-    nz = d[d != 0]
-    p = float(wilcoxon(d, zero_method='zsplit', method='exact').pvalue) if len(nz) else 1.0
+    p = exact_signed_rank_p(d)
     idx = rng.integers(0, n, size=(10000, n))
     boot = d[idx].mean(1)
     boot_hl = np.array([hodges_lehmann(d[i]) for i in idx[:2000]])
     return {'n': n, 'mean': float(d.mean()), 'lo': float(np.percentile(boot, 2.5)), 'hi': float(np.percentile(boot, 97.5)),
             'hl': hodges_lehmann(d), 'hl_lo': float(np.percentile(boot_hl, 2.5)), 'hl_hi': float(np.percentile(boot_hl, 97.5)),
             'up': int((d > 0).sum()), 'down': int((d < 0).sum()), 'tie': int((d == 0).sum()), 'p': p}
+
+
+def exact_signed_rank_p(d, decimals=12):
+    """条件精确双侧符号秩检验:给定观测到的 |d| 中秩(并列取平均秩),零差值保留并把其秩对半分到两侧(zsplit),
+    只对非零差值的符号做穷举(动态规划计数),双侧 p = 2×min(两侧尾概率),上限 1。
+    与 scipy.stats.wilcoxon(zero_method='zsplit') 的统计量一致;scipy 的 method='exact' 在有并列/零值时不是条件精确分布。"""
+    from scipy.stats import rankdata
+    d = np.round(np.asarray(d, float), decimals)
+    n = len(d)
+    if n == 0 or np.all(d == 0):
+        return 1.0
+    r = rankdata(np.abs(d))
+    r2 = np.round(r * 2).astype(int)
+    zero = d == 0
+    base = r2[zero].sum() / 2.0
+    tplus = r2[d > 0].sum() + base
+    nz = r2[~zero]
+    S = int(nz.sum())
+    dp = np.zeros(S + 1, dtype=object); dp[0] = 1
+    for v in nz:
+        dp[v:] = dp[v:] + dp[:S + 1 - v]
+    total = sum(dp)
+    sums = np.arange(S + 1) + base
+    lo = sum(dp[sums <= tplus + 1e-9]); hi = sum(dp[sums >= tplus - 1e-9])
+    return float(min(1.0, 2 * min(lo, hi) / total))
 
 
 def holm(ps):
@@ -247,7 +271,7 @@ def causal_rows(C, subset=None):
                 vm = {s: cs[s][f'{task}_{sp}_{m}'] for s in v0 if f'{task}_{sp}_{m}' in cs[s]}
                 ks = sorted(set(v0) & set(vm))
                 d = np.array([vm[k] - v0[k] for k in ks]) * (100 if task == 'ERP' else 1)
-                p = float(wilcoxon(d, zero_method='zsplit', method='exact').pvalue) if np.any(d != 0) else 1.0
+                p = exact_signed_rank_p(d)
                 idx = rng.integers(0, len(d), size=(10000, len(d)))
                 boot = d[idx].mean(1)
                 boot_hl = np.array([hodges_lehmann(d[i]) for i in idx[:2000]])
@@ -298,7 +322,7 @@ if os.path.exists(cz):
     idx = rng.integers(0, len(dw), size=(10000, len(dw)))
     trans_walk = {'n': len(dw), 'mean': float(dw.mean()), 'lo': float(np.percentile(dw[idx].mean(1), 2.5)), 'hi': float(np.percentile(dw[idx].mean(1), 97.5)),
                   'up': int((dw > 0).sum()), 'down': int((dw < 0).sum()), 'tie': int((dw == 0).sum()),
-                  'p': float(wilcoxon(dw, zero_method='zsplit', method='exact').pvalue) if np.any(dw != 0) else 1.0}
+                  'p': exact_signed_rank_p(dw)}
     L += [f"过渡实验走路段 SSVEP 配对变化:{trans_walk['mean']:+.2f} [{trans_walk['lo']:+.2f}, {trans_walk['hi']:+.2f}],{trans_walk['up']}/{trans_walk['down']}/{trans_walk['tie']},p={trans_walk['p']:.2g}", '']
     # figshare 分层
     crows_f = causal_rows(C, FIGSHARE)

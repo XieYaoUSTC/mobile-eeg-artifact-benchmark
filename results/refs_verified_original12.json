@@ -1,0 +1,112 @@
+{
+ "kline2015": {
+  "doi": "10.1088/1741-2560/12/4/046022",
+  "title": "Isolating gait-related movement artifacts in electroencephalography during human walking",
+  "journal": "Journal of Neural Engineering",
+  "volume": "12",
+  "page": "046022",
+  "article": null,
+  "year": 2015,
+  "first": "Kline"
+ },
+ "gwin2010": {
+  "doi": "10.1152/jn.00105.2010",
+  "title": "Removal of Movement Artifact From High-Density EEG Recorded During Walking and Running",
+  "journal": "Journal of Neurophysiology",
+  "volume": "103",
+  "page": "3526-3534",
+  "article": null,
+  "year": 2010,
+  "first": "Gwin"
+ },
+ "kilicarslan2016": {
+  "doi": "10.1088/1741-2560/13/2/026013",
+  "title": "A robust adaptive denoising framework for real-time artifact removal in scalp EEG measurements",
+  "journal": "Journal of Neural Engineering",
+  "volume": "13",
+  "page": "026013",
+  "article": null,
+  "year": 2016,
+  "first": "Kilicarslan"
+ },
+ "kilicarslan2019": {
+  "doi": "10.1088/1741-2552/ab2b61",
+  "title": "Characterization and real-time removal of motion artifacts from EEG signals",
+  "journal": "Journal of Neural Engineering",
+  "volume": "16",
+  "page": "056027",
+  "article": null,
+  "year": 2019,
+  "first": "Kilicarslan"
+ },
+ "nordin2018": {
+  "doi": "10.1088/1741-2552/aad7d7",
+  "title": "Dual-electrode motion artifact cancellation for mobile electroencephalography",
+  "journal": "Journal of Neural Engineering",
+  "volume": "15",
+  "page": "056024",
+  "article": null,
+  "year": 2018,
+  "first": "Nordin"
+ },
+ "downey2023": {
+  "doi": "10.3390/s23198214",
+  "title": "iCanClean Removes Motion, Muscle, Eye, and Line-Noise Artifacts from Phantom EEG",
+  "journal": "Sensors",
+  "volume": "23",
+  "page": "8214",
+  "article": null,
+  "year": 2023,
+  "first": "Downey"
+ },
+ "gonsisko2023": {
+  "doi": "10.3390/s23020928",
+  "title": "iCanClean Improves Independent Component Analysis of Mobile Brain Imaging with EEG",
+  "journal": "Sensors",
+  "volume": "23",
+  "page": "928",
+  "article": null,
+  "year": 2023,
+  "first": "Gonsisko"
+ },
+ "lee2020": {
+  "doi": "10.1109/tnsre.2020.3040264",
+  "title": "A Real-Time Movement Artifact Removal Method for Ambulatory Brain-Computer Interfaces",
+  "journal": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+  "volume": "28",
+  "page": "2660-2670",
+  "article": null,
+  "year": 2020,
+  "first": "Lee"
+ },
+ "gorjan2022": {
+  "doi": "10.1088/1741-2552/ac4430",
+  "title": "RETRACTED: A 1D CNN for high accuracy classification and transfer learning in motor imagery EEG-based brain-computer interface",
+  "journal": "Journal of Neural Engineering",
+  "volume": "18",
+  "page": "066053",
+  "article": null,
+  "year": 2021,
+  "first": "Mattioli"
+ },
+ "lee2021": {
+  "doi": "10.1038/s41597-021-01094-4",
+  "title": "Mobile BCI dataset of scalp- and ear-EEGs with ERP and SSVEP paradigms while standing, walking, and running",
+  "journal": "Scientific Data",
+  "volume": "8",
+  "page": null,
+  "article": "315",
+  "year": 2021,
+  "first": "Lee"
+ },
+ "perezblanco2026": {
+  "doi": "10.1038/s41597-026-07287-z",
+  "title": "An EEG-EMG-kinematics dataset from wrist pointing tasks for biomarker research in neurorehabilitation",
+  "journal": "Scientific Data",
+  "volume": "13",
+  "page": null,
+  "article": "931",
+  "year": 2026,
+  "first": "Perez-Blanco"
+ }
+}

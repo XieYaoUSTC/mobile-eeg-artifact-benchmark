@@ -21,7 +21,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'paper_jne', 'figs')
 os.makedirs(OUT, exist_ok=True)
-plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 9, 'axes.unicode_minus': False})
+plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 9, 'axes.unicode_minus': False, 'pdf.fonttype': 42, 'ps.fonttype': 42})
 T = json.load(open(os.path.join(ROOT, 'results', 'tables_v3.json')))
 S = T['stats']
 N_JOBS = int(sys.argv[1]) if len(sys.argv) > 1 else 4
@@ -47,20 +47,20 @@ def arrow(ax, x0, y0, x1, y1):
 if 'protocol' in FIGS:
     fig, ax = plt.subplots(figsize=(7.4, 6.2))
     ax.set_xlim(0, 10); ax.set_ylim(0, 10); ax.axis('off')
-    FS = 6.6
+    FS = 6.8
     box(ax, 0.2, 8.75, 9.6, 1.05, 'Public dataset (Lee et al. 2021): 24 participants; 0 / 0.8 / 1.6 / 2.0 m/s; ERP and SSVEP tasks\n'
         'figshare release s01-s18 (500 Hz raw) + OSF release sub-01/02/03/04/15/16 (100 Hz)\n'
         'participant identity reconciled by stimulus-onset-sequence matching (six recordings in both releases: S16)', fs=FS)
-    box(ax, 0.2, 7.2, 4.7, 1.25, 'Retrospective front end\nzero-phase 0.5 Hz high-pass, CAR, 100 Hz\nIMU 18 channels (acc + gyro), per-segment z-score', fs=FS)
-    box(ax, 5.1, 7.2, 4.7, 1.25, 'Causal front end (only past samples)\ncausal 0.5 Hz high-pass (0.1 Hz: S15), CAR, 40 Hz low-pass\nIMU zero-order hold, running normalization', fs=FS)
+    box(ax, 0.1, 7.2, 4.85, 1.25, 'Retrospective front end\nzero-phase 0.5 Hz high-pass, CAR, 100 Hz\nIMU 18 channels (acc + gyro), per-segment z-score', fs=FS)
+    box(ax, 5.05, 7.2, 4.85, 1.25, 'Causal front end (only past samples)\ncausal 0.5 Hz high-pass (0.1 Hz: S15), CAR, 40 Hz LP\nIMU zero-order hold, running normalization', fs=FS)
     arrow(ax, 2.55, 8.75, 2.55, 8.45); arrow(ax, 7.45, 8.75, 7.45, 8.45)
-    box(ax, 0.2, 5.1, 4.7, 1.8, 'Adapted methods (fitted on the test recording, no labels)\n'
+    box(ax, 0.1, 5.1, 4.85, 1.8, 'Adapted methods (fitted on the test recording, unlabelled)\n'
         'reg: lagged IMU ridge (whole segment; 10 s / 30 s blocks)\n'
         'cca: global CCA with lags (no-lag cell: S13)\n'
         'icc: windowed CCA, R2 > 0.85  |  gait, gait+reg\n'
         'asr: standard order (rank-safe variant: S4)\n'
         'NLMS; gated NLMS (segment gate = speed label)', fs=FS)
-    box(ax, 5.1, 5.1, 4.7, 1.8, 'Causal replay\n'
+    box(ax, 5.05, 5.1, 4.85, 1.8, 'Causal replay\n'
         'NLMS with 100 ms EEG delay\n'
         'motion gate: trailing 2-s head-acceleration energy\n'
         'relative to a standing calibration, hysteresis\n'
@@ -72,10 +72,10 @@ if 'protocol' in FIGS:
         'SSVEP: training-free CCA on 5-s epochs, three classes -> accuracy', fc='#eef7ee', ec='#275', fs=FS)
     arrow(ax, 2.55, 5.1, 2.55, 4.75); arrow(ax, 7.45, 5.1, 7.45, 4.75)
     box(ax, 0.2, 1.65, 3.05, 1.65, 'Parameters\ntwo participant halves\n(fixed seed)\nmu, r, theta chosen on one\nhalf, applied to the other,\nthen swapped', fc='#fff6e6', ec='#a60', fs=FS)
-    box(ax, 3.45, 1.65, 3.1, 1.65, 'Inference\nfamilies F1-F14 fixed before\nthe held-out runs\nWilcoxon + Holm; bootstrap CI;\nHodges-Lehmann; up/down\ncounts', fc='#fff6e6', ec='#a60', fs=FS)
+    box(ax, 3.45, 1.65, 3.1, 1.65, 'Inference\nfamilies F1-F10 fixed before the\nheld-out runs; F11-F14 added in\nrevision. Exact signed-rank + Holm;\nbootstrap CI; Hodges-Lehmann;\nup/down counts', fc='#fff6e6', ec='#a60', fs=FS)
     box(ax, 6.75, 1.65, 3.05, 1.65, 'Controls\nstanding cost of every method\nsurrogate references\n(time shift, phase-randomized)\nIMU-only decoding\nsingle-release check (S14)', fc='#fff6e6', ec='#a60', fs=FS)
     arrow(ax, 1.7, 3.65, 1.7, 3.3); arrow(ax, 5.0, 3.65, 5.0, 3.3); arrow(ax, 8.3, 3.65, 8.3, 3.3)
-    box(ax, 0.2, 0.3, 9.6, 0.95, 'Outputs regenerated from per-participant results by one script:\nall tables (main text and S1-S17), figures and the public repository', fc='#eeeeee', ec='#555', fs=FS)
+    box(ax, 0.2, 0.3, 9.6, 0.95, 'Outputs regenerated from per-participant results by one script:\nall tables (main text; supplementary sections S1-S17), figures, repository', fc='#eeeeee', ec='#555', fs=FS)
     arrow(ax, 5.0, 1.65, 5.0, 1.25)
     save(fig, 'fig_protocol')
     print('fig_protocol done', flush=True)
@@ -120,6 +120,7 @@ if 'forest' in FIGS:
         ax.set_xlabel('ERP change (AUC × 100 points)' if task == 'ERP' else 'SSVEP change (percentage points)')
         ax.grid(axis='x', alpha=.3)
         ax.set_title(task, fontsize=9)
+        ax.text(-0.02 if ax_i else -0.55, 1.03, '(a)' if ax_i == 0 else '(b)', transform=ax.transAxes, fontsize=10, weight='bold')
     # y 轴刻度:重算位置
     pos = []
     yy = 0
@@ -171,6 +172,8 @@ if 'gate' in FIGS:
     ax.axvline(tj, color='tab:red', lw=0.8); ax.axvline(first_on, color='tab:red', ls=':', lw=0.8)
     ax.set_xlim(t[w0], t[w1 - 1]); ax.set_xlabel('Time (s)'); ax.set_ylabel('Oz (µV)'); ax.legend(fontsize=7, loc='upper left', frameon=False)
     ax.text(tj + 0.3, ax.get_ylim()[1] * 0.85, 'walking starts', fontsize=7, color='tab:red'); ax.text(first_on + 0.3, ax.get_ylim()[1] * 0.85, 'gate opens', fontsize=7, color='tab:red')
+    for k, a in enumerate(axes):
+        a.text(-0.1, 1.04, f'({chr(97 + k)})', transform=a.transAxes, fontsize=10, weight='bold')
     fig.tight_layout(); save(fig, 'fig_gate')
     print('fig_gate done', flush=True)
 
@@ -209,6 +212,7 @@ if 'probe' in FIGS:
         ax.plot(range(4), v, color=col, ls=ls, marker='o', ms=3, lw=1, label=lab)
     ax.set_xticks(range(4)); ax.set_xticklabels(['0', '0.8', '1.6', '2.0']); ax.set_xlabel('Treadmill speed (m/s)'); ax.set_ylabel('Mean CCA correlation per trial')
     ax.legend(fontsize=5.5, frameon=False, loc='center right'); ax.grid(alpha=.3); ax.set_title('SSVEP signal probe', fontsize=8)
+    ax.text(-0.25, 1.05, '(a)', transform=ax.transAxes, fontsize=10, weight='bold')
     vmax = 0
     maps = {}
     for sp in ['0.8', '1.6', '2.0']:
@@ -223,6 +227,7 @@ if 'probe' in FIGS:
         ax.set_title(f'{sp} m/s (n={n})', fontsize=8)
     cb = fig.colorbar(im, ax=fig.axes[1:], shrink=0.7, pad=0.02); cb.set_label('Fraction of EEG variance removed by reg', fontsize=7); cb.ax.tick_params(labelsize=6)
     fig.text(0.62, 0.95, 'Variance removed by lagged IMU regression (ERP recordings)', ha='center', fontsize=8)
+    fig.text(0.40, 0.95, '(b)', fontsize=10, weight='bold')
     save(fig, 'fig_probe_topo')
     json.dump({sp: {'channels': maps[sp][0], 'mean_removed_fraction': maps[sp][1].tolist(), 'n': maps[sp][2]} for sp in maps}, open(os.path.join(ROOT, 'results', 'p1_clean_eval', 'removed_variance_topo.json'), 'w'), indent=1)
     print('fig_probe_topo done', flush=True)
